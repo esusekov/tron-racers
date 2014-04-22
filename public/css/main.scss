@@ -1,0 +1,119 @@
+
+body {
+	text-align: center;
+}
+h1{
+	font-size: 75px;
+}
+h2{
+	font-size: 30px;
+}
+.window__button {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background-color:#ededed;
+	text-indent:-5px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+	font-family:Arial;
+	font-size:20px;
+	font-weight:bold;
+	font-style:normal;
+	height:60px;
+	line-height:60px;
+	width:150px;
+	text-decoration:none;
+	text-align: center;
+	text-shadow:1px 1px 0px #ffffff;
+	margin-top: 20px;
+}
+.window__button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+	background-color:#dfdfdf;
+}.window__button:active {
+	position:relative;
+	top:1px;
+}
+
+.window__headers {
+	margin-left: auto;
+	color: white;
+}
+
+.window {
+	margin: auto;
+	text-align: center;
+	background-image: url("images/Tron.jpg");
+	height: 800px;
+	width: 600px;
+	padding: 10px;
+	border: 2px groove #ccc;
+}
+
+.window__loading__image {
+	background-image: url("images/loading.gif");
+	height: 64px;
+	width: 64px;
+	margin: auto;
+}
+.window__loading {
+	height: 180px;
+	width: 300px;
+	background-color: rgba(255, 255, 255, 0.8);
+	padding-top: 100px;
+	border-radius: 5px;
+	margin: auto;
+}
+.window__error {
+	height: 265px;
+	width: 300px;
+	padding-top: 15px;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 5px;
+	margin: auto;
+}
+.window__table {
+	width: 300px;
+	background-color: rgba(255, 255, 255, 0.8);
+	margin: auto;
+	border: 2px groove #ccc;
+	border-collapse: collapse;
+}
+.window__table__td {
+	color: #00004B;
+	height: 20px;
+	border: 2px groove #ccc;
+	padding: 5px;
+}
+
+.window__table__th {
+	color: #00004B;
+	border: 2px groove #ccc;
+	padding: 5px;
+}
+
+.window__image {
+	width: 500px;
+	height: 500px;
+}
+
+.window__headers__fix {
+	color: blue;
+}
+
+input[type="text"] {
+    border:1px solid #9E9E9E;
+    border-radius: 3px;
+    color: #000000;
+    padding: 3px;
+    font-size: 20px;
+    font-family: Verdana;
+    background: #FFF;
+
+}
+input[type="text"]:focus {
+	border-color: #9E9E9E;
+	background: #FFFFF0;
+};

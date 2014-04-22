@@ -1,0 +1,16 @@
+<fest:template xmlns:fest="http://fest.mail.ru"
+  context_name="json">
+		<h1 class="window__headers">TRON RACERS</h1>
+		<h2 class="window__headers">Score Board</h2>
+		<div id="scoretable">
+			<div id="loading" class="window__loading">
+				<div class="window__loading__image">
+				</div>	
+			</div>
+			<div id="error" class="window__error">
+				<h2 class="window__headers">Oops! Something wrong happened. Please refresh table.</h2>
+				<button id="refreshTable" class="window__button">Refresh</button>
+			</div>
+		</div>	
+		<p><a href="#" class="window__button">Back</a></p>
+</fest:template>
