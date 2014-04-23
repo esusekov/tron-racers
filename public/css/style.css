@@ -29,8 +29,8 @@
 /*css for screens with width = 1920x1080*/
 @media screen and (min-height: 1500px) {
 	.container {
-		width: 100%;
-		height: 100%;
+		width: 1920;
+		height: 1080;
 		background: url(images/mochaGrunge.png);
 	}
 
@@ -39,7 +39,7 @@
 	}
 
 	.nav__list > li > img {
-		height: 10%;
+		height: 200;
 	}
 
 	.pointer-right__img-right, .pointer-left__img-left {
