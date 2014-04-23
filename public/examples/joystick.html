@@ -1,14 +1,80 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 	<head>
+		<meta charset="UTF-8">
 		<title>joystick</title>
+		<link rel="stylesheet" href="/css/style.css">
 	</head>
 	<body>
+		<div class="container">
+			<div class="nav">
+				<ul class="nav__list">
+					<li><img src="/js/images/connect.png" class="nav__list__connect-disconnect"></li>
+					<li><img src="/js/images/play.png" class="nav__list__play-pause"></li>
+					<li><img src="/js/images/restart.png" class="nav_list__restart"></li>
+				</ul>
+			</div>
+			<div class="pointer-left">
+				<img class="pointer-left__img-left" src="/js/images/left.png">
+			</div>
+			<div class="pointer-right">
+				<img class="pointer-right__img-right" src="/js/images/right.png">
+			</div>
+		</div>
 		<form>
 			<input id="token" />
 			<button id="connect" type="submit">connect</button>
 		</form>
 		<div id="message"></div>
 		<script data-main="/examples/joystick" src="/js/lib/require.js"></script>
+		<script type="text/javascript" src="/js/lib/jquery.js"></script>
+		<script type="text/javascript">
+			$(function(){
+
+				/*play-pause*/
+				$(".nav__list__play-pause").on("mousedown", function() {
+					$(this).css("opacity", "0.5");
+				});
+				$(".nav__list__play-pause").on("mouseup", function() {
+					if ($(this).attr("src") == "/js/images/play.png") {
+						$(this).attr("src", "/js/images/pause.png");
+						console.log("pressed play");
+					}
+					else {
+						$(this).attr("src", "/js/images/play.png");
+						console.log("pressed pause");
+					}
+					$(this).css("opacity", "1");
+				});
+
+
+				/*restart*/
+				$(".nav_list__restart").on("mousedown", function() {
+					$(this).css("opacity", "0.5");
+				});
+				$(".nav_list__restart").on("mouseup", function() {
+					$(this).css("opacity", "1");
+					console.log("pressed restart");
+				});
+
+				/*button left and right*/
+				$(".pointer-left__img-left").on("mousedown", function() {
+					$(this).css("opacity", "0.5");
+				});
+				$(".pointer-left__img-left").on("mouseup", function() {
+					$(this).css("opacity", "1");
+					console.log("pressed button-left");
+				});
+
+				$(".pointer-right__img-right").on("mousedown", function() {
+					$(this).css("opacity", "0.5");
+				});
+				$(".pointer-right__img-right").on("mouseup", function() {
+					$(this).css("opacity", "1");
+					console.log("pressed button-right");
+				});
+
+			});
+		</script>
 	</body>
 </html>

@@ -1,0 +1,83 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/*css for screens with width = 960x640*/
+@media all and (device-width: 960px) {
+	.container {
+		width: 960px;
+		height: 640px;
+		background: url(images/mochaGrunge.png);
+	}
+	
+	.nav {
+		border-bottom: 5px solid #000;
+	}
+	
+	.pointer-right__img-right, .pointer-left__img-left {
+		width: 95%;
+		margin-top: 15%;
+		vertical-align: middle;
+	}
+
+	.nav__list > li > img {
+		height: 100px;
+	}
+}
+
+/*css for screens with width = 1920x1080*/
+@media all and (device-width: 1920px) {
+	.container {
+		width: 1920px;
+		height: 1080px;
+		background: url(images/mochaGrunge.png);
+	}
+
+	.nav {
+		border-bottom: 10px solid #000;
+	}
+
+	.nav__list > li > img {
+		height: 200px;
+	}
+
+	.pointer-right__img-right, .pointer-left__img-left {
+		margin-top: 25%;
+		vertical-align: middle;
+	}
+}
+
+/*for all screens*/
+.nav {
+	margin-left: 50px;
+	margin-right: 50px;
+	height: 20%;
+}
+
+.pointer-left {
+	width: 48%;
+	height: auto;
+	float: left;
+	text-align: center;
+}
+
+.pointer-right {
+	width: 48%;
+	height: auto;
+	float: right;
+	text-align: center;
+}
+
+.nav__list {
+	margin: 0;
+}
+
+.nav__list li {
+	margin-left: 10%;
+	margin-right: 11%;
+	display: inline;
+}
+
+
+
