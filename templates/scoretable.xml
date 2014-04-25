@@ -12,7 +12,7 @@
 				<td class="window__table__td"><fest:value>rank</fest:value></td>
 				<td class="window__table__td"><fest:value>json[i].name</fest:value></td>
 				<td class="window__table__td"><fest:value>json[i].score</fest:value></td>
-			</tr><!-- foo=bar -->
+			</tr>
 		</fest:each>
 	</table>
 </fest:template>

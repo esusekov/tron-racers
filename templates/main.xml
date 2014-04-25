@@ -2,7 +2,7 @@
   context_name="json">
     
     <h1 class="window__headers">TRON RACERS</h1>
-    <h2 class="window__headers">Main Menu</h2>
+    
 	
 	<p><a href="#game" class="window__button">Start Game</a></p>
 	<p><a href="#scoreboard" class="window__button">Score Board</a></p>

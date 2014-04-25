@@ -112,6 +112,7 @@ function Bot(name, wayImage) {
 	this.pointSpriteY,
 	this.px = [],
 	this.py = [];
+	this.isLongWay = false;
 }
 
 Bot.prototype.setTrackChase = function(ax, ay, bx, by) {
@@ -172,6 +173,13 @@ Bot.prototype.setTrackChase = function(ax, ay, bx, by) {
 		this.extraY = this.y;
 		this.x = this.px[1];
 		this.y = this.py[1];
+
+		if (d > 400) { 
+			this.isLongWay = true;
+			this.px = this.px.slice(2);
+			this.py = this.py.slice(2);
+		}
+
 		return true;
 	}
 	catch(e) {
@@ -313,28 +321,40 @@ var draw = function() {
 	playerBike.calculateCoordinatesForBot();
 	botBike.cleaningWay(field, N);
 
-	if (botBike.setTrackChase(botBike.x, botBike.y, playerBike.coordinatesXforBot, playerBike.coordinatesYforBot)){ /**/ }
+	if (!botBike.isLongWay) {
+		botBike.cleaningWay(field, N);
+		if (botBike.setTrackChase(botBike.x, botBike.y, playerBike.coordinatesXforBot, playerBike.coordinatesYforBot)){ /**/ }
+		else {
+			botBike.setTrackSurvival();
+		}
+	}
+	else if (botBike.px.length < 400) {
+			botBike.extraX = botBike.x;
+			botBike.extraY = botBike.y;
+			botBike.x = botBike.px.shift();
+			botBike.y = botBike.py.shift();
+	}
 	else {
-		botBike.setTrackSurvival();
+		botBike.extraX = botBike.x;
+		botBike.extraY = botBike.y;
+		botBike.x = botBike.px.shift();
+		botBike.y = botBike.py.shift();
+		botBike.isLongWay = false;
 	}
 
 	if ((playerBike.checkCollision() && botBike.checkCollision()) ||
 		(playerBike.i == botBike.x && playerBike.j == botBike.y)) {
-		redBikeScore.innerHTML = (+redBikeScore.innerHTML) + 1;
-		blueBikeScore.innerHTML = (+blueBikeScore.innerHTML) + 1;
-		result.innerHTML = "DRAW";
+		
 		indicatorEnd = true;
 		endingFlag = -1;
 	}
 	else if (playerBike.checkCollision()) {
-		redBikeScore.innerHTML = (+redBikeScore.innerHTML) + 1;
-		result.innerHTML = "RedBike WIN";
+		
 		indicatorEnd = true;
 		endingFlag = -1;
 	}
 	else if (botBike.checkCollision()) {
-		blueBikeScore.innerHTML = (+blueBikeScore.innerHTML) + 1;
-		result.innerHTML = "BlueBike WIN";
+		
 		indicatorEnd = true;
 		endingFlag = 1;
 	}
@@ -458,7 +478,6 @@ function start() {
 	document.onkeyup = courseBike;
 	button.value = "PAUSE";
 	button.setAttribute('onClick', 'stop(0)');
-	result.innerHTML = "";
 	refreshIntervalId = setInterval(draw, speed);
 }
 
@@ -470,8 +489,8 @@ var button = document.getElementById("button"),
 	redBikeScore = document.getElementById("redBike"),
 	result = document.getElementById("result"), 
 	ctx = canvas.getContext("2d"),
-	playerBike = new Bike("Blue",'js/images/newBlue.png'),
-	botBike = new Bot("Red", "js/images/newRed.png"),
+	playerBike = new Bike("Blue",'js/images/newBlue2.png'),
+	botBike = new Bot("Red", "js/images/newRed2.png"),
 	fieldImage = new Image();
 	fieldImage.src = 'js/images/field.png';
 
@@ -482,6 +501,7 @@ var refreshIntervalId,
 	field = [],
 	count = 0;
 
+button.setAttribute('onClick', 'start()');
 
 fieldImage.onload = function() {
 	playerBike.setRandomValue();

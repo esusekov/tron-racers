@@ -1,10 +1,18 @@
 <fest:template xmlns:fest="http://fest.mail.ru"
   context_name="json">
-	<h2 class="window__headers">You win!</h2>
-	<h2 class="window__headers">Your score:</h2>
-	<h2 id="newScore" class="window__headers"></h2>
-    <h2 class="window__headers">Nickname:</h2> 
-    <p><input class="window__input" type="text" name="Nickname"/></p> 
-    <input id="save" type="submit" class="window__button" value="Save"/>
-    <p><button id="dontsave" class="window__button">Don't Save</button></p>
+	<h1 class="window__headers">You win!</h1>
+	<table>
+		<tr>
+			<td><h2 class="window__headers">Your score:</h2></td>
+			<td><h2 id="newScore" class="window__headers"></h2></td>
+		</tr>
+		<tr>
+			<td><h2 class="window__headers">Nickname:</h2> </td>
+			<td><input class="window__input" type="text" name="Nickname"/></td>
+		</tr>
+	</table>
+	<ul class="buttons">
+		<li class="buttons__left"><a id="save" href="javascript:void(0)" class="window__button">Save</a></li>
+		<li class="buttons__right"><a id="dontsave" href="javascript:void(0)" class="window__button">Back</a></li>
+	</ul>
 </fest:template>

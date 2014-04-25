@@ -1,18 +1,16 @@
 <fest:template xmlns:fest="http://fest.mail.ru"
   context_name="json">
-		<p><a href="#" class = "window__button">Back</a></p>
-		<canvas id="myCanvas" width="510" height="510" align="center"> 
+		<div class="canvas">
+            <canvas id="myCanvas" width="510" height="510" align="center"> 
             <!-- Insert fallback content here -->
             Sorry, your browser doesn't support canvas technology 
         </canvas> 
-        <table align="center" style="display: none;">
-            <tr >
-                <td><h2 class="window__headers__fix">BlueBike: </h2></td><td style="width: 40px;  height: 25px;"><h2 id="blueBike" class="window__headers__fix">0</h2></td>
-                <td style="padding-left:30px;"><h2 class="window__headers__fix">RedBike: </h2></td><td style="width: 40px;  height: 25px;"><h2 id="redBike" class="window__headers__fix">0</h2></td>
-            </tr>
-
-        </table>
-        <input id="button" type="button" value="START" onClick="start()" class="window__button"></input>
-        <h2 id="result" class="window__headers__fix" style="margin-top:-10px; display: none;"> </h2>
+        </div>
+            
+            
+        <ul class="buttons">
+            <li class="buttons__left"><a id="button" href="javascript:void(0)" class="window__button">Start</a></li>
+            <li class="buttons__right"><a href="#" class="window__button">Back</a></li>
+        </ul>
         <script src="js/game.js"></script>
 </fest:template>
