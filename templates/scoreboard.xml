@@ -9,7 +9,7 @@
 			</div>
 			<div id="error" class="window__error">
 				<p class="window__headers">Oops! Something wrong happened. Please refresh table.</p>
-				<a id="refreshTable" class="window__button">Refresh</a>
+				<a id="refreshTable" href="javascript:void(0)" class="window__button">Refresh</a>
 			</div>
 		</div>	
 		<a href="#" class="window__button">Back</a>

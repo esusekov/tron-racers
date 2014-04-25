@@ -29,4 +29,5 @@ define([
     router
 ){
     Backbone.history.start();
+    localStorage.setItem("savedData", JSON.stringify([]));
 });

@@ -56,20 +56,20 @@ define([
                         saveBtn.prop("disabled", false);
                         dontsaveBtn.prop("disabled", false);
                         window.location.replace("#scoreboard"); 
-                    }
-                    if(xhr.status == 400) {
+                    } else if(xhr.status == 400) {
                         nick.val(null);
                         nick.prop("disabled", false);
                         saveBtn.prop("disabled", false);
                         dontsaveBtn.prop("disabled", false);
                         nick.css({"border-color": "red"});
-                    }
-                    if(xhr.status >= 500) {
+                    } else {
                         var local = {
                             name: nick.val(),
                             score: newScore
                         }
-                        localStorage[localStorage.length] = JSON.stringify(local);
+                        var savedData = JSON.parse(localStorage.getItem('savedData'));
+                        savedData[savedData.length] = JSON.stringify(local);
+                        localStorage.setItem("savedData", JSON.stringify(savedData));
                         nick.val(null);
                         nick.css({"border-color": "#9E9E9E"});
                         nick.prop("disabled", false);

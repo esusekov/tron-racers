@@ -61,16 +61,17 @@ define([
             });
         },
         updateFromLocal: function() {
-            var localStorageLength = localStorage.length;
-            if (localStorageLength > 0) {
-                for (var i = 0; i < localStorageLength; i++) {
+            var savedData = JSON.parse(localStorage.getItem('savedData'));
+            var savedDataLength = savedData.length;
+            if (savedDataLength > 0) {
+                for (var i = 0; i < savedDataLength; i++) {
                     var xhr = new XMLHttpRequest();
                     xhr.open('POST', '/scores', true);
                     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-                    var localModel = JSON.parse(localStorage[i]);
+                    var localModel = JSON.parse(savedData[i]);
                     xhr.send('name='+localModel.name+'&score='+localModel.score);
-                    delete localStorage[i];
                 }
+                localStorage.setItem("savedData", JSON.stringify([]));
             }
         }
     });
