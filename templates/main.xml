@@ -2,9 +2,13 @@
   context_name="json">
     
     <h1 class="window__headers">TRON RACERS</h1>
-    
-	
-	<p><a href="#game" class="window__button">Start Game</a></p>
+    <div id="info-connect">
+    	<h4>Enter this web address in your mobile browser:</h4>
+    	<h5>tron-racers.herokuapp.com</h5>
+    	<h4>Enter game code:</h4>
+		<h5 id="message"> </h5>
+	</div>
+	<p id="start-game" style="display: none;"><a href="#game"  class="window__button">Start Game</a></p>
 	<p><a href="#scoreboard" class="window__button">Score Board</a></p>
     
 </fest:template>

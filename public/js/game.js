@@ -1,3 +1,4 @@
+
 function Bike(name,wayImage) {
 	this.name = name,
     this.x,
@@ -368,7 +369,7 @@ var draw = function() {
 		playerBike.setRandomValue();
 		botBike.setRandomValue();
 		clearField(field, N);
-		stop(endingFlag);
+		gameStop(endingFlag);
 		return;
 	}
 	//field[bikeBlue.i + 1][bikeBlue.j] = -20;//плохое решение (проблема с синхронизацией байков)
@@ -434,6 +435,30 @@ function courseBike(evt) {
 	}
 }
 
+function courseBikeTouch(msg) {
+	if (msg!="left" && msg!="right") return;
+	switch(msg) {
+		case "left":{
+			switch(playerBike.course) {
+				case  1: playerBike.course =  2; playerBike.currentFrame = 2; break;
+				case  2: playerBike.course = -1; playerBike.currentFrame = 0; break;
+				case -1: playerBike.course = -2; playerBike.currentFrame = 3; break;
+				case -2: playerBike.course =  1; playerBike.currentFrame = 1; break;
+			}				      		
+			break;
+		}//влево
+		case "right":{
+			switch(playerBike.course) {
+				case  1: playerBike.course = -2; playerBike.currentFrame = 3; break;
+				case  2: playerBike.course =  1; playerBike.currentFrame = 1; break;
+				case -1: playerBike.course =  2; playerBike.currentFrame = 2; break;
+				case -2: playerBike.course = -1; playerBike.currentFrame = 0; break;
+			}
+			break;
+		}//вправо
+	}
+}
+
 function clearField(field, N) {
 	for (var i = 0; i < N; i++) {
 		for (var j = 0; j < N; j++) {
@@ -447,10 +472,11 @@ function clearField(field, N) {
 	}
 }	
 
-function stop(flag) {
+function gameStop(flag) {
 	document.onkeyup = null;
+	coursesForTouch = function(msg) {return;};
 	button.value = "START";
-	button.setAttribute('onClick', 'start()');
+	button.setAttribute('onClick', 'gameStart()');
 	clearTimeout(refreshIntervalId);
 	if (flag == 1) {
 		var gv = document.getElementById("gameview");
@@ -458,7 +484,7 @@ function stop(flag) {
 		var gov = document.getElementById("gameOverview");
 		gov.style.display = "";
 		var newScore = document.getElementById("newScore");
-		newScore.innerHTML = "" + (5000 - 2*count);
+		newScore.innerHTML = "" + Math.floor(5000 - 600*Math.log(count));
 		count = 0;
 		draw();
 	}
@@ -474,10 +500,11 @@ function stop(flag) {
     }
 }
 
-function start() {
+function gameStart() {
 	document.onkeyup = courseBike;
+	coursesForTouch = courseBikeTouch;
 	button.value = "PAUSE";
-	button.setAttribute('onClick', 'stop(0)');
+	button.setAttribute('onClick', 'gameStop(0)');
 	refreshIntervalId = setInterval(draw, speed);
 }
 
@@ -501,7 +528,8 @@ var refreshIntervalId,
 	field = [],
 	count = 0;
 
-button.setAttribute('onClick', 'start()');
+var coursesForTouch = function(msg) {return;};
+button.setAttribute('onClick', 'gameStart()');
 
 fieldImage.onload = function() {
 	playerBike.setRandomValue();
@@ -520,3 +548,4 @@ fieldImage.onload = function() {
 	drawFeild();
 	draw();	
 }
+

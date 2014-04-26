@@ -13,6 +13,20 @@ h1 {
 h2 {
   font-size: 50px; }
 
+h4 {
+  font-size: 20px;
+  font-family: 'Comic Sans MS';
+  color: #01B8E4;
+  text-shadow: 0 0 10px #000, 0 0 20px #01B8E4;
+  margin-bottom: 5px; }
+
+h5 {
+  font-size: 20px;
+  font-family: 'Comic Sans MS';
+  color: #FF6347;
+  text-shadow: 0 0 10px #000, 0 0 20px #01B8E4;
+  margin-bottom: 5px; }
+
 p {
   height: 70px;
   margin-bottom: 20px; }

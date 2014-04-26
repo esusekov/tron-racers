@@ -24,10 +24,94 @@ require.config({
 });
 
 define([
-    'router'
+    'router',
+    'Connector',
+    'game'
 ], function(
-    router
+    router,
+    Connector,
+    Game
 ){
     Backbone.history.start();
     localStorage.setItem("savedData", JSON.stringify([]));
+    $(function() {
+        var message = document.getElementById('message');
+        var start, init, reconnect;
+        // Создаем связь с сервером
+        var server = new Connector({
+                server: ['getToken', 'bind'],
+                remote: '/console'
+            }
+        );
+
+        // На подключении игрока стартуем игру
+        server.on('player-joined', function(data){
+            // Передаем id связки консоль-джостик
+            start(data.guid);
+        });
+
+        // Инициализация
+        var init = function(){
+            message.innerHTML = 'ready';
+            // Если id нет
+            if (!localStorage.getItem('consoleguid')){
+                // Получаем токен
+                server.getToken(function(token){
+                    message.innerHTML = token;
+                });
+            } else { // иначе
+                // переподключаемся к уже созданной связке
+                reconnect();
+            }
+        };
+
+        // Переподключение
+        var reconnect = function(){
+            // Используем сохранненный id связки
+            server.bind({guid: localStorage.getItem('consoleguid')}, function(data){
+                // Если все ок
+                if (data.status == 'success'){
+                    // Стартуем
+                    start(data.guid);
+                // Если связки уже нет
+                } else if (data.status == 'undefined guid'){
+                    // Начинаем все заново
+                    localStorage.removeItem('consoleguid');
+                    init();
+                }
+            });
+        };
+
+        server.on('reconnect', reconnect);
+
+        // Старт игры
+        var start = function(guid){
+            console.log('start console');
+            // Сохраняем id связки
+            localStorage.setItem('consoleguid', guid);
+            $("#info-connect").hide();
+            $("#start-game").show();
+        };
+
+        init();
+
+        // Обмен сообщениями
+        server.on('message', function(data, answer){
+            switch (data) {
+                case 'play': gameStart(); answer(data); break;
+                case 'pause': gameStop(0); answer(data); break;
+                case 'restart': gameStop(-2); answer(data); break;
+                default: coursesForTouch(data); answer(data);
+            }
+            
+        });
+
+        window.server = server;
+
+        /*
+        server.send('message', function(answer){
+            console.log(answer);
+        });
+        */
+    });
 });
