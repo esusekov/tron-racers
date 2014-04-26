@@ -25,12 +25,10 @@ require.config({
 
 define([
     'router',
-    'Connector',
-    'game'
+    'Connector'
 ], function(
     router,
-    Connector,
-    Game
+    Connector
 ){
     Backbone.history.start();
     localStorage.setItem("savedData", JSON.stringify([]));
