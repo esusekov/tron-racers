@@ -13079,7 +13079,7 @@ define("backbone", ["underscore","jquery"], (function (global) {
     };
 }(this)));
 
-define('tmpl/main',[],function () { return function (__fest_context){var __fest_self=this,__fest_buf="",__fest_chunks=[],__fest_chunk,__fest_attrs=[],__fest_select,__fest_if,__fest_iterator,__fest_to,__fest_fn,__fest_html="",__fest_blocks={},__fest_params,__fest_element,__fest_debug_file="",__fest_debug_line="",__fest_debug_block="",__fest_htmlchars=/[&<>"]/g,__fest_htmlchars_test=/[&<>"]/,__fest_short_tags = {"area":true,"base":true,"br":true,"col":true,"command":true,"embed":true,"hr":true,"img":true,"input":true,"keygen":true,"link":true,"meta":true,"param":true,"source":true,"wbr":true},__fest_element_stack = [],__fest_htmlhash={"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"},__fest_jschars=/[\\'"\/\n\r\t\b\f<>]/g,__fest_jschars_test=/[\\'"\/\n\r\t\b\f<>]/,__fest_jshash={"\"":"\\\"","\\":"\\\\","/":"\\/","\n":"\\n","\r":"\\r","\t":"\\t","\b":"\\b","\f":"\\f","'":"\\'","<":"\\u003C",">":"\\u003E"},___fest_log_error;if(typeof __fest_error === "undefined"){___fest_log_error = (typeof console !== "undefined" && console.error) ? function(){return Function.prototype.apply.call(console.error, console, arguments)} : function(){};}else{___fest_log_error=__fest_error};function __fest_log_error(msg){___fest_log_error(msg+"\nin block \""+__fest_debug_block+"\" at line: "+__fest_debug_line+"\nfile: "+__fest_debug_file)}function __fest_replaceHTML(chr){return __fest_htmlhash[chr]}function __fest_replaceJS(chr){return __fest_jshash[chr]}function __fest_extend(dest, src){for(var i in src)if(src.hasOwnProperty(i))dest[i]=src[i];}function __fest_param(fn){fn.param=true;return fn}function __fest_call(fn, params,cp){if(cp)for(var i in params)if(typeof params[i]=="function"&&params[i].param)params[i]=params[i]();return fn.call(__fest_self,params)}function __fest_escapeJS(s){if (typeof s==="string") {if (__fest_jschars_test.test(s))return s.replace(__fest_jschars,__fest_replaceJS);} else if (typeof s==="undefined")return "";return s;}function __fest_escapeHTML(s){if (typeof s==="string") {if (__fest_htmlchars_test.test(s))return s.replace(__fest_htmlchars,__fest_replaceHTML);} else if (typeof s==="undefined")return "";return s;}var json=__fest_context;__fest_buf+=("<h1 class=\"window__headers\">TRON RACERS</h1><p><a href=\"#game\" class=\"window__button\">Start Game</a></p><p><a href=\"#scoreboard\" class=\"window__button\">Score Board</a></p>");__fest_to=__fest_chunks.length;if (__fest_to) {__fest_iterator = 0;for (;__fest_iterator<__fest_to;__fest_iterator++) {__fest_chunk=__fest_chunks[__fest_iterator];if (typeof __fest_chunk==="string") {__fest_html+=__fest_chunk;} else {__fest_fn=__fest_blocks[__fest_chunk.name];if (__fest_fn) __fest_html+=__fest_call(__fest_fn,__fest_chunk.params,__fest_chunk.cp);}}return __fest_html+__fest_buf;} else {return __fest_buf;}} ; });
+define('tmpl/main',[],function () { return function (__fest_context){var __fest_self=this,__fest_buf="",__fest_chunks=[],__fest_chunk,__fest_attrs=[],__fest_select,__fest_if,__fest_iterator,__fest_to,__fest_fn,__fest_html="",__fest_blocks={},__fest_params,__fest_element,__fest_debug_file="",__fest_debug_line="",__fest_debug_block="",__fest_htmlchars=/[&<>"]/g,__fest_htmlchars_test=/[&<>"]/,__fest_short_tags = {"area":true,"base":true,"br":true,"col":true,"command":true,"embed":true,"hr":true,"img":true,"input":true,"keygen":true,"link":true,"meta":true,"param":true,"source":true,"wbr":true},__fest_element_stack = [],__fest_htmlhash={"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"},__fest_jschars=/[\\'"\/\n\r\t\b\f<>]/g,__fest_jschars_test=/[\\'"\/\n\r\t\b\f<>]/,__fest_jshash={"\"":"\\\"","\\":"\\\\","/":"\\/","\n":"\\n","\r":"\\r","\t":"\\t","\b":"\\b","\f":"\\f","'":"\\'","<":"\\u003C",">":"\\u003E"},___fest_log_error;if(typeof __fest_error === "undefined"){___fest_log_error = (typeof console !== "undefined" && console.error) ? function(){return Function.prototype.apply.call(console.error, console, arguments)} : function(){};}else{___fest_log_error=__fest_error};function __fest_log_error(msg){___fest_log_error(msg+"\nin block \""+__fest_debug_block+"\" at line: "+__fest_debug_line+"\nfile: "+__fest_debug_file)}function __fest_replaceHTML(chr){return __fest_htmlhash[chr]}function __fest_replaceJS(chr){return __fest_jshash[chr]}function __fest_extend(dest, src){for(var i in src)if(src.hasOwnProperty(i))dest[i]=src[i];}function __fest_param(fn){fn.param=true;return fn}function __fest_call(fn, params,cp){if(cp)for(var i in params)if(typeof params[i]=="function"&&params[i].param)params[i]=params[i]();return fn.call(__fest_self,params)}function __fest_escapeJS(s){if (typeof s==="string") {if (__fest_jschars_test.test(s))return s.replace(__fest_jschars,__fest_replaceJS);} else if (typeof s==="undefined")return "";return s;}function __fest_escapeHTML(s){if (typeof s==="string") {if (__fest_htmlchars_test.test(s))return s.replace(__fest_htmlchars,__fest_replaceHTML);} else if (typeof s==="undefined")return "";return s;}var json=__fest_context;__fest_buf+=("<h1 class=\"window__headers\">TRON RACERS</h1><div id=\"info-connect\"><h4>Enter this web address in your mobile browser:</h4><h5>tron-racers.herokuapp.com</h5><h4>Enter game code:</h4><h5 id=\"message\"></h5></div><p id=\"start-game\" style=\"display: none;\"><a href=\"#game\" class=\"window__button\">Start Game</a></p><p><a href=\"#scoreboard\" class=\"window__button\">Score Board</a></p>");__fest_to=__fest_chunks.length;if (__fest_to) {__fest_iterator = 0;for (;__fest_iterator<__fest_to;__fest_iterator++) {__fest_chunk=__fest_chunks[__fest_iterator];if (typeof __fest_chunk==="string") {__fest_html+=__fest_chunk;} else {__fest_fn=__fest_blocks[__fest_chunk.name];if (__fest_fn) __fest_html+=__fest_call(__fest_fn,__fest_chunk.params,__fest_chunk.cp);}}return __fest_html+__fest_buf;} else {return __fest_buf;}} ; });
 define('views/main',[
     'backbone',
     'tmpl/main'
@@ -13481,6 +13481,868 @@ define('router',[
 
     return new Router();
 });
+define('FnQuery',[],function(){
+    function FnQuery(){
+        this.query = [];
+    }
+
+    FnQuery.prototype = {
+        add: function(fn){
+            if (this._store){
+                this.query.push(fn);
+            } else {
+                fn();
+            }
+        },
+
+        store: function(){
+            this._store = true;
+        },
+
+        run: function(){
+            this._store = false;
+
+            for (var i = 0, l = this.query.length; i < l; i++){
+                this.query[i]();
+            }
+
+            this.query = [];
+        }
+    };
+
+    return FnQuery;
+});
+
+
+/*!
+ * socket.io-node
+ * Copyright(c) 2011 LearnBoost <dev@learnboost.com>
+ * MIT Licensed
+ */
+
+/**
+ * Module dependencies.
+ */
+
+var client = require('socket.io-client');
+
+/**
+ * Version.
+ */
+
+exports.version = '0.9.16';
+
+/**
+ * Supported protocol version.
+ */
+
+exports.protocol = 1;
+
+/**
+ * Client that we serve.
+ */
+
+exports.clientVersion = client.version;
+
+/**
+ * Attaches a manager
+ *
+ * @param {HTTPServer/Number} a HTTP/S server or a port number to listen on.
+ * @param {Object} opts to be passed to Manager and/or http server
+ * @param {Function} callback if a port is supplied
+ * @api public
+ */
+
+exports.listen = function (server, options, fn) {
+  if ('function' == typeof server) {
+    console.warn('Socket.IO\'s `listen()` method expects an `http.Server` instance\n'
+    + 'as its first parameter. Are you migrating from Express 2.x to 3.x?\n'
+    + 'If so, check out the "Socket.IO compatibility" section at:\n'
+    + 'https://github.com/visionmedia/express/wiki/Migrating-from-2.x-to-3.x');
+  }
+
+  if ('function' == typeof options) {
+    fn = options;
+    options = {};
+  }
+
+  if ('undefined' == typeof server) {
+    // create a server that listens on port 80
+    server = 80;
+  }
+
+  if ('number' == typeof server) {
+    // if a port number is passed
+    var port = server;
+
+    if (options && options.key)
+      server = require('https').createServer(options);
+    else
+      server = require('http').createServer();
+
+    // default response
+    server.on('request', function (req, res) {
+      res.writeHead(200);
+      res.end('Welcome to socket.io.');
+    });
+
+    server.listen(port, fn);
+  }
+
+  // otherwise assume a http/s server
+  return new exports.Manager(server, options);
+};
+
+/**
+ * Manager constructor.
+ *
+ * @api public
+ */
+
+exports.Manager = require('./manager');
+
+/**
+ * Transport constructor.
+ *
+ * @api public
+ */
+
+exports.Transport = require('./transport');
+
+/**
+ * Socket constructor.
+ *
+ * @api public
+ */
+
+exports.Socket = require('./socket');
+
+/**
+ * Static constructor.
+ *
+ * @api public
+ */
+
+exports.Static = require('./static');
+
+/**
+ * Store constructor.
+ *
+ * @api public
+ */
+
+exports.Store = require('./store');
+
+/**
+ * Memory Store constructor.
+ *
+ * @api public
+ */
+
+exports.MemoryStore = require('./stores/memory');
+
+/**
+ * Redis Store constructor.
+ *
+ * @api public
+ */
+
+exports.RedisStore = require('./stores/redis');
+
+/**
+ * Parser.
+ *
+ * @api public
+ */
+
+exports.parser = require('./parser');
+
+define("socket.io", (function (global) {
+    return function () {
+        var ret, fn;
+        return ret || global.io;
+    };
+}(this)));
+
+define('Connector',[
+    'backbone',
+    'FnQuery',
+    'socket.io'
+], function(
+    Backbone,
+    FnQuery,
+    io
+){
+    function Connector(conf){
+        conf || (conf = {});
+
+        this.socket = io.connect(conf.remote);
+        var self = this;
+
+        this._readyFns = [];
+        this._connected = false;
+
+        this._query = new FnQuery();
+        this._query.store();
+
+        if (conf.server){
+            this._setFnList(conf.server);
+        }
+
+        this.socket.on('disconnect', function(){
+            self._connected = false;
+            self._query.store();
+            self.trigger('disconnect');
+        });
+
+        this.socket.on('connect', function(){
+            if (!self.isReady()){
+                self.socket.emit('getFnList', function(fnList){
+                    self._fnList = fnList;
+                    self._setFnList(fnList);
+
+                    self._setReady();
+                    self._connected = true;
+                    self.trigger('connect');
+                    self._query.run();
+                });
+
+                self.socket.on('sms', function(data, answer){
+                    self.trigger(data.type || 'message', data.data, answer);
+                });
+
+            } else {
+                self._connected = true;
+                self.trigger('reconnect');
+                self._query.run();
+            }
+        });
+    }
+
+    $.extend(Connector.prototype, Backbone.Events, {
+        send: function(data, answer){
+            if (!answer && typeof data == 'function'){
+                answer = data;
+                data = void 0;
+            }
+
+            this.socket.emit('sms', {data: data}, function(data){
+                answer && answer(data);
+            })
+        },
+
+        isReady: function(){
+            return this._isReady;
+        },
+
+        onReady: function(fn){
+            if (this.isReady()){
+                fn.call(this);
+            } else {
+                this._readyFns.push(fn);
+            }
+        },
+
+        _setReady: function(){
+            for (var i = 0, l = this._readyFns.length; i < l; i++){
+                var fn = this._readyFns[i];
+
+                fn.call(this);
+            }
+
+            this._readyFns = [];
+
+            this._isReady = true;
+        },
+
+        _setFnList: function(fnList){
+            var self = this;
+
+            for (var i = 0, l = fnList.length; i < l; i++){
+                var name = fnList[i];
+
+                self[name] = (function(name){
+                    return function(data, answer){
+                        self._query.add(function(){
+                            if (self._fnList.indexOf(name) == -1){
+                                answer && answer('Error: undefined function');
+                                return;
+                            }
+
+                            if (!answer && typeof data == 'function'){
+                                answer = data;
+                                data = void 0;
+                            }
+
+                            self.socket.emit('fnCall', {
+                                name: name,
+                                data: data
+                            }, answer);
+
+                        });
+                    };
+                })(name);
+            }
+        }
+    });
+
+    return Connector;
+});
+
+
+function Bike(name,wayImage) {
+	this.name = name,
+    this.x,
+	this.y,
+	this.pointSpriteX,
+	this.pointSpriteY,
+	this.course,
+	this.image = new Image(),
+	this.image.src = wayImage,
+	this.width  = 15,
+	this.height = 15,
+	this.currentFrame,
+	this.coordinatesXforBot,
+	this.coordinatesYforBot;
+}
+
+Bike.prototype.setCoordinates = function() {
+	switch(this.course) {
+		case  1: this.stepX =  5; this.stepY =  0; break; 
+		case -1: this.stepX = -5; this.stepY =  0; break; 
+		case  2: this.stepX =  0; this.stepY = -5; break; 
+		case -2: this.stepX =  0; this.stepY =  5; break; 
+	}
+	this.x += this.stepX;
+	this.y += this.stepY;
+}
+
+Bike.prototype.setPointForSprite = function() {
+	//alert(this.x + " " + this.y);
+	switch(this.course) {
+		case  1: this.pointSpriteX =  this.x - 15; this.pointSpriteY = this.y - 10; break; 
+		case -1: this.pointSpriteX =  this.x - 5; this.pointSpriteY = this.y - 10; break; 
+		case  2: this.pointSpriteX =  this.x - 10; this.pointSpriteY = this.y - 5; break;  
+		case -2: this.pointSpriteX =  this.x - 10; this.pointSpriteY = this.y - 15; break; 
+	}
+}
+
+Bike.prototype.setCenter = function() {
+	/*var centerX = 10;
+	centerY = 10;
+	switch(this.course) {
+		case  1: case -2: centerX = this.x + 10; centerY = this.y + 10; break; 
+		case -1: centerX = this.x + 10; centerY = this.y + 10; break; 
+		case  2: centerX = this.x + 10; centerY = this.y + 10; break;  
+	}*/
+	this.i = (this.x / 5) - 1;
+	this.j = (this.y / 5) - 1;
+}
+
+Bike.prototype.calculateCoordinatesForBot = function() {
+	switch(this.course) {
+		case  1: this.stepX =  5; this.stepY =  0; break; 
+		case -1: this.stepX = -5; this.stepY =  0; break; 
+		case  2: this.stepX =  0; this.stepY = -5; break; 
+		case -2: this.stepX =  0; this.stepY =  5; break; 
+	}
+	this.coordinatesXforBot =  ((this.x + this.stepX) / 5) - 1;
+	this.coordinatesYforBot =  ((this.y + this.stepY) / 5) - 1;	
+}
+
+Bike.prototype.checkCollision = function() {
+	if (field[this.i][this.j] <= -10) {
+		return true;
+	}
+	/*switch (this.course) {
+		case  1: if (field[this.i][this.j] <= -10) { 
+			//alert(bike.name + " lose!"); 
+			//location.reload();
+			return true;
+		} break;
+		case  2: if (field[this.i][this.j] <= -10) { 
+			//alert(bike.name + " lose!"); 
+			//location.reload(); 
+			return true;
+		} break;
+		case -1: if (field[this.i][this.j] <= -10) {
+			//alert(bike.name + " lose!"); 
+			//location.reload();
+			return true; 
+		} break;
+		case -2: if (field[this.i][this.j] <= -10) { 
+			//alert(bike.name + " lose!"); 
+			//location.reload();
+			return true; 
+		} break;
+	}*/
+	return false;
+}
+
+Bike.prototype.setRandomValue = function() {
+	this.x = 5 * (Math.floor(Math.random() * (101 - 61 + 1)) + 61);
+	this.y = 5 * (Math.floor(Math.random() * 101) + 1);
+	this.course = -1;
+	this.currentFrame = 0; 
+}
+
+/*************************************/
+
+function Bot(name, wayImage) {
+	this.name = name,
+	this.x,
+	this.y,
+	this.image = new Image(),
+	this.image.src = wayImage,
+	this.width  = 15,
+	this.height = 15,
+	this.extraX,
+	this.extraX,
+	this.currentFrame,
+	this.course,
+	this.pointSpriteX,
+	this.pointSpriteY,
+	this.px = [],
+	this.py = [];
+	this.isLongWay = false;
+}
+
+Bot.prototype.setTrackChase = function(ax, ay, bx, by) {
+	try {
+		var dx = [1, 0, -1, 0];
+		var dy = [0, 1, 0, -1];
+		var d, x, y, k;
+		var stop;
+		d = 0;
+		field[ax][ay] = 0;
+
+		do {
+			stop = true;
+			for (y = 1; y < N; ++y) {
+				for (x = 1; x < N; ++x) {
+					if (field[x][y] == d) {
+						for (k = 0; k < 4; ++k) {
+							if (field[x + dx[k]][y + dy[k]] == -2) {
+								stop = false;
+								field[x + dx[k]][y + dy[k]] = d + 1;
+							}
+						}
+					}
+				}
+			}
+			d++;
+		} while (!stop && field[bx][by] == -2);
+
+		if (field[bx][by] == -2) {
+			field[ax][ay] = -10;
+		 	return false;
+		}
+
+		x = bx;
+		y = by;
+		d = field[bx][by];
+
+		while (d > 0) {
+			this.px[d] = x;
+			this.py[d] = y;
+			d--;
+			for (k = 0; k < 4; ++k) {
+				if (field[x + dx[k]][y + dy[k]] == d) {
+					x = x + dx[k];
+					y = y + dy[k];
+					break;
+				} 
+			}
+		}
+
+		this.px[0] = ax;
+		this.py[0] = ay;
+		field[ax][ay] = -10;
+		if (this.px.length == 1 || this.py.length == 1) {
+			return false;
+		}
+		this.extraX = this.x;
+		this.extraY = this.y;
+		this.x = this.px[1];
+		this.y = this.py[1];
+
+		if (d > 400) { 
+			this.isLongWay = true;
+			this.px = this.px.slice(2);
+			this.py = this.py.slice(2);
+		}
+
+		return true;
+	}
+	catch(e) {
+		//field[ax][ay] = -10;
+		return false;
+	}
+}
+
+Bot.prototype.setTrackSurvival = function() {
+	this.cleaningWay(field, N);
+	/*var i = 0;
+	if (field[this.x + 1][this.y] == -2) {
+		this.px.push(this.x + 1);
+		this.py.push(this.y);
+		i++;
+	}
+	if (field[this.x][this.y + 1] == -2) {
+		this.px.push(this.x);
+		this.py.push(this.y + 1);
+	}
+	if (field[this.x - 1][this.y] == -2) {
+		this.px.push(this.x - 1);
+		this.py.push(this.y);
+	}
+	if (field[this.x][this.y - 1] == -2) {
+		this.px.push(this.x);
+		this.py.push(this.y - 1);
+	}
+	
+	if (this.px.length != 0) {
+		var i = Math.floor(Math.random() * this.px.length);
+		this.x = this.px[i];
+		this.y = this.py[i];
+		return true;
+	}
+
+	return false;*/
+	this.extraX = this.x;
+	this.extraY = this.y;
+
+	var i  = [0, 0 , 0 , 0]; 
+	var Max = 0;
+	var jMax = -1; 
+	var a = this.x,
+		b = this.y;
+	while (field[++a][this.y] == -2) {
+		i[0]++;
+	}
+	while (field[this.x][++b] == -2) {
+		i[1]++;
+	}
+	a = this.x;
+	b = this.y;
+	while (field[--a][this.y] == -2) {
+		i[2]++;
+	}
+	while (field[this.x][--b] == -2) {
+		i[3]++;
+	}
+	for (var j = 0; j < i.length; ++j) {
+		if (i[j] > Max) {
+			jMax = j;
+			Max = i[j];
+		}
+	}
+	switch(jMax) {
+		case -1: this.x += 1; return false;
+		case 0: this.x += 1; return true;
+		case 1: this.y += 1; return true;
+		case 2: this.x -= 1; return true;
+		case 3: this.y -= 1; return true;
+	}
+}
+
+Bot.prototype.cleaningWay = function(field, N) {
+	for (var i = 0; i < N; i++){
+		for (var j = 0; j < N; j++){
+			if (field[i][j] > -2) {
+				field[i][j] = -2;
+			}
+		}	
+	}	
+	this.px = [];
+	this.py = [];
+}
+
+Bot.prototype.checkCollision = function() {
+	if (field[this.x][this.y] <= -10) { 
+			//alert(bike.name + " lose!"); 
+			//location.reload();
+		return true;
+	}
+	return false;	
+}
+
+Bot.prototype.setRandomValue = function() {
+	this.x = Math.floor(Math.random() * (41 - 1)) + 2;
+	this.y = Math.floor(Math.random() * 100) + 1;
+	this.px = [];
+	this.py = [];
+}
+
+Bot.prototype.setPointForSprite = function() {
+	
+	if (this.x > this.extraX) {
+		this.course = 1;
+		this.currentFrame = 1;
+	}
+	else if (this.x < this.extraX) {
+		this.course = -1;
+		this.currentFrame = 0;
+	}
+	else if (this.y > this.extraY) {
+		this.course = -2;
+		this.currentFrame = 3;
+	}
+	else if (this.y < this.extraY) {
+		this.course = 2;
+		this.currentFrame = 2;
+	}
+
+	switch(this.course) {
+		case  1: this.pointSpriteX =  this.x * 5 - 10; this.pointSpriteY = this.y * 5 - 5; break; 
+		case -1: this.pointSpriteX =  this.x * 5;      this.pointSpriteY = this.y * 5 - 5; break; 
+		case  2: this.pointSpriteX =  this.x * 5 - 5;  this.pointSpriteY = this.y * 5 - 5; break;  
+		case -2: this.pointSpriteX =  this.x * 5 - 5;  this.pointSpriteY = this.y * 5 - 5; break; 
+	}
+}
+
+/*************************************/
+
+var draw = function() {
+	count++;
+	var endingFlag;
+	var indicatorEnd = false;
+	drawFeild();
+	playerBike.setCoordinates();
+	playerBike.setCenter();
+	playerBike.calculateCoordinatesForBot();
+	botBike.cleaningWay(field, N);
+
+	if (!botBike.isLongWay) {
+		botBike.cleaningWay(field, N);
+		if (botBike.setTrackChase(botBike.x, botBike.y, playerBike.coordinatesXforBot, playerBike.coordinatesYforBot)){ /**/ }
+		else {
+			botBike.setTrackSurvival();
+		}
+	}
+	else if (botBike.px.length < 400) {
+			botBike.extraX = botBike.x;
+			botBike.extraY = botBike.y;
+			botBike.x = botBike.px.shift();
+			botBike.y = botBike.py.shift();
+	}
+	else {
+		botBike.extraX = botBike.x;
+		botBike.extraY = botBike.y;
+		botBike.x = botBike.px.shift();
+		botBike.y = botBike.py.shift();
+		botBike.isLongWay = false;
+	}
+
+	if ((playerBike.checkCollision() && botBike.checkCollision()) ||
+		(playerBike.i == botBike.x && playerBike.j == botBike.y)) {
+		
+		indicatorEnd = true;
+		endingFlag = -1;
+	}
+	else if (playerBike.checkCollision()) {
+		
+		indicatorEnd = true;
+		endingFlag = -1;
+	}
+	else if (botBike.checkCollision()) {
+		
+		indicatorEnd = true;
+		endingFlag = 1;
+	}
+
+	if (!indicatorEnd) {
+		drawBike();
+	}
+	else {
+		drawBike();
+		indicatorEnd = false;
+		playerBike.setRandomValue();
+		botBike.setRandomValue();
+		clearField(field, N);
+		gameStop(endingFlag);
+		return;
+	}
+	//field[bikeBlue.i + 1][bikeBlue.j] = -20;//плохое решение (проблема с синхронизацией байков)
+}
+
+function drawBike() {
+	field[playerBike.i][playerBike.j] = -20;
+	
+	field[botBike.x][botBike.y] = -10;
+
+	for (var i = 0; i < N; i++) {
+		for (var j = 0; j < N; j++) {
+			if (field[i][j] == -20) {
+				ctx.fillStyle="#27408B";
+				ctx.fillRect(i * 5, j * 5, 5, 5);
+			} else if (field[i][j] == -10) {
+				ctx.fillStyle="#CD0000";
+				ctx.fillRect(i * 5, j * 5, 5, 5)
+			}
+		}
+	}
+	
+	playerBike.setPointForSprite();
+	botBike.setPointForSprite();
+	ctx.drawImage(playerBike.image, 0, playerBike.height * playerBike.currentFrame, playerBike.width, playerBike.height, playerBike.pointSpriteX, playerBike.pointSpriteY, playerBike.width, playerBike.height);	
+	ctx.drawImage(botBike.image, 0, botBike.height * botBike.currentFrame, botBike.width, botBike.height, botBike.pointSpriteX, botBike.pointSpriteY, botBike.width, botBike.height);	
+}
+
+function drawFeild() {
+	ctx.drawImage(fieldImage, 0, 0, 510, 510);
+	for (var i = 0; i < N; ++i) {
+		ctx.fillStyle="#303030";
+		ctx.fillRect(0, i * 5, 5, 5);
+		ctx.fillRect(i * 5, 0, 5, 5);
+		ctx.fillRect(505,i * 5, 5, 5);
+		ctx.fillRect(i * 5, 505, 5, 5);
+	}
+}
+
+
+function courseBike(evt) {
+	evt = (evt) ? evt : window.event;
+	var code = (evt.charCode) ? evt.charCode : evt.keyCode;
+	switch(code) {
+		case 37:{
+			switch(playerBike.course) {
+				case  1: playerBike.course =  2; playerBike.currentFrame = 2; break;
+				case  2: playerBike.course = -1; playerBike.currentFrame = 0; break;
+				case -1: playerBike.course = -2; playerBike.currentFrame = 3; break;
+				case -2: playerBike.course =  1; playerBike.currentFrame = 1; break;
+			}				      		
+			break;
+		}//влево
+		case 39:{
+			switch(playerBike.course) {
+				case  1: playerBike.course = -2; playerBike.currentFrame = 3; break;
+				case  2: playerBike.course =  1; playerBike.currentFrame = 1; break;
+				case -1: playerBike.course =  2; playerBike.currentFrame = 2; break;
+				case -2: playerBike.course = -1; playerBike.currentFrame = 0; break;
+			}
+			break;
+		}//вправо
+	}
+}
+
+function courseBikeTouch(msg) {
+	if (msg!="left" && msg!="right") return;
+	switch(msg) {
+		case "left":{
+			switch(playerBike.course) {
+				case  1: playerBike.course =  2; playerBike.currentFrame = 2; break;
+				case  2: playerBike.course = -1; playerBike.currentFrame = 0; break;
+				case -1: playerBike.course = -2; playerBike.currentFrame = 3; break;
+				case -2: playerBike.course =  1; playerBike.currentFrame = 1; break;
+			}				      		
+			break;
+		}//влево
+		case "right":{
+			switch(playerBike.course) {
+				case  1: playerBike.course = -2; playerBike.currentFrame = 3; break;
+				case  2: playerBike.course =  1; playerBike.currentFrame = 1; break;
+				case -1: playerBike.course =  2; playerBike.currentFrame = 2; break;
+				case -2: playerBike.course = -1; playerBike.currentFrame = 0; break;
+			}
+			break;
+		}//вправо
+	}
+}
+
+function clearField(field, N) {
+	for (var i = 0; i < N; i++) {
+		for (var j = 0; j < N; j++) {
+			if (i == 0 || j == 0 || i == (N -1) || j == (N - 1)) {
+				field[i][j] = -30;
+			}
+			else {
+				field[i][j] = -2;
+			}
+		}
+	}
+}	
+
+function gameStop(flag) {
+	document.onkeyup = null;
+	coursesForTouch = function(msg) {return;};
+	button.value = "START";
+	button.setAttribute('onClick', 'gameStart()');
+	clearTimeout(refreshIntervalId);
+	if (flag == 1) {
+		var gv = document.getElementById("gameview");
+		gv.style.display = "none";
+		var gov = document.getElementById("gameOverview");
+		gov.style.display = "";
+		var newScore = document.getElementById("newScore");
+		newScore.innerHTML = "" + Math.floor(5000 - 600*Math.log(count));
+		count = 0;
+		draw();
+	}
+	if (flag == -1) {
+		count = 0;
+	}
+    if (flag == -2) {
+        count = 0;
+        playerBike.setRandomValue();
+        botBike.setRandomValue();
+        clearField(field, N);
+        draw();
+    }
+}
+
+function gameStart() {
+	document.onkeyup = courseBike;
+	coursesForTouch = courseBikeTouch;
+	button.value = "PAUSE";
+	button.setAttribute('onClick', 'gameStop(0)');
+	refreshIntervalId = setInterval(draw, speed);
+}
+
+/*************************************/
+
+var button = document.getElementById("button"),
+	canvas = document.getElementById("myCanvas"),
+	blueBikeScore = document.getElementById("blueBike"),
+	redBikeScore = document.getElementById("redBike"),
+	result = document.getElementById("result"), 
+	ctx = canvas.getContext("2d"),
+	playerBike = new Bike("Blue",'js/images/newBlue2.png'),
+	botBike = new Bot("Red", "js/images/newRed2.png"),
+	fieldImage = new Image();
+	fieldImage.src = 'js/images/field.png';
+
+
+var refreshIntervalId,
+	speed = 75,
+	N = 102,
+	field = [],
+	count = 0;
+
+var coursesForTouch = function(msg) {return;};
+button.setAttribute('onClick', 'gameStart()');
+
+fieldImage.onload = function() {
+	playerBike.setRandomValue();
+	botBike.setRandomValue();
+	for (var i = 0; i < N; i++) {
+		field[i] = [];
+		for (var j = 0; j < N; j++){
+			if (i == 0 || j == 0 || i == (N -1) || j == (N - 1)) {
+				field[i][j] = -30;
+			}
+			else {
+				field[i][j] = -2;
+			}
+		}
+	}	
+	drawFeild();
+	draw();	
+}
+
+;
+define("game", function(){});
+
 require.config({
     urlArgs: "_=" + (new Date()).getTime(),
     baseUrl: "js",
@@ -13490,7 +14352,7 @@ require.config({
         backbone: "lib/backbone",
         Connector: "lib/Connector",
         FnQuery: "lib/FnQuery",
-        "socket.io": "/socket.io/socket.io"
+        "socket.io": "lib/socket.io"
     },
     shim: {
         'backbone': {
@@ -13507,11 +14369,95 @@ require.config({
 });
 
 define('main',[
-    'router'
+    'router',
+    'Connector',
+    'game'
 ], function(
-    router
+    router,
+    Connector,
+    Game
 ){
     Backbone.history.start();
     localStorage.setItem("savedData", JSON.stringify([]));
+    $(function() {
+        var message = document.getElementById('message');
+        var start, init, reconnect;
+        // Создаем связь с сервером
+        var server = new Connector({
+                server: ['getToken', 'bind'],
+                remote: '/console'
+            }
+        );
+
+        // На подключении игрока стартуем игру
+        server.on('player-joined', function(data){
+            // Передаем id связки консоль-джостик
+            start(data.guid);
+        });
+
+        // Инициализация
+        var init = function(){
+            message.innerHTML = 'ready';
+            // Если id нет
+            if (!localStorage.getItem('consoleguid')){
+                // Получаем токен
+                server.getToken(function(token){
+                    message.innerHTML = token;
+                });
+            } else { // иначе
+                // переподключаемся к уже созданной связке
+                reconnect();
+            }
+        };
+
+        // Переподключение
+        var reconnect = function(){
+            // Используем сохранненный id связки
+            server.bind({guid: localStorage.getItem('consoleguid')}, function(data){
+                // Если все ок
+                if (data.status == 'success'){
+                    // Стартуем
+                    start(data.guid);
+                // Если связки уже нет
+                } else if (data.status == 'undefined guid'){
+                    // Начинаем все заново
+                    localStorage.removeItem('consoleguid');
+                    init();
+                }
+            });
+        };
+
+        server.on('reconnect', reconnect);
+
+        // Старт игры
+        var start = function(guid){
+            console.log('start console');
+            // Сохраняем id связки
+            localStorage.setItem('consoleguid', guid);
+            $("#info-connect").hide();
+            $("#start-game").show();
+        };
+
+        init();
+
+        // Обмен сообщениями
+        server.on('message', function(data, answer){
+            switch (data) {
+                case 'play': gameStart(); answer(data); break;
+                case 'pause': gameStop(0); answer(data); break;
+                case 'restart': gameStop(-2); answer(data); break;
+                default: coursesForTouch(data); answer(data);
+            }
+            
+        });
+
+        window.server = server;
+
+        /*
+        server.send('message', function(answer){
+            console.log(answer);
+        });
+        */
+    });
 });
 
