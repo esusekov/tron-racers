@@ -45,10 +45,12 @@ define([
 		}
 	);
 
-	$("#play-btn").on("touchstart", function() {
+	$("#play-btn").on("touchstart", function(e) {
+		e.preventDefault();
 		$(this).css("opacity", "0.5");
 	});
-	$("#play-btn").on("touchend", function() {
+	$("#play-btn").on("touchend", function(e) {
+		e.preventDefault();
 		if ($(this).attr("src") == "/js/images/play.png") {
 			$(this).attr("src", "/js/images/pause.png");
 			server.send('play', function(answer){
@@ -65,10 +67,12 @@ define([
 	});
 
 	/*restart*/
-	$("#restart-btn").on("touchstart", function() {
+	$("#restart-btn").on("touchstart", function(e) {
+		e.preventDefault();
 		$(this).css("opacity", "0.5");
 	});
-	$("#restart-btn").on("touchend", function() {
+	$("#restart-btn").on("touchend", function(e) {
+		e.preventDefault();
 		$(this).css("opacity", "1");
 		server.send('restart', function(answer){
 			console.log(answer);
@@ -76,10 +80,12 @@ define([
 	});
 
 	/*button left and right*/
-	$("#left-btn").on("touchstart", function() {
+	$("#left-btn").on("touchstart", function(e) {
+		e.preventDefault();
 		$(this).css("opacity", "0.5");
 	});
-	$("#left-btn").on("touchend", function() {
+	$("#left-btn").on("touchend", function(e) {
+		e.preventDefault();
 		$(this).css("opacity", "1");
 		server.send('left', function(answer){
 			console.log(answer);
