@@ -111,7 +111,7 @@ define([
 	// });
 
 
-	$("#right-btn").on("touchstart", function() {
+	$("#right-btn").on("touchstart", function(e) {
 		e.preventDefault();
 		$(this).css("opacity", "0.5");
 	});
@@ -119,7 +119,7 @@ define([
 		e.preventDefault();
 		$(this).css("opacity", "1");
 	});
-	$("#right-btn").on("touchend", function() {
+	$("#right-btn").on("touchend", function(e) {
 		e.preventDefault();
 		$(this).css("opacity", "1");
 		server.send('right', function(answer){
