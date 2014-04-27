@@ -7,6 +7,7 @@ require.config({
         backbone: "/js/lib/backbone",
         Connector: "/js/lib/Connector",
         FnQuery: "/js/lib/FnQuery",
+        hammer: "/js/lib/hammer",
         "socket.io": "/socket.io/socket.io"
     },
     shim: {
@@ -19,14 +20,19 @@ require.config({
         },
         "socket.io": {
             exports: "io"
+        },
+        "hammer": {
+            exports: "Hammer"
         }
     }
 });
 
 define([
-    'Connector'
+    'Connector',
+    'hammer'
 ], function(
-    Connector
+    Connector,
+    Hammer
 ){
 	//var message = document.getElementById('message');
 	var input = document.getElementById('token');
@@ -58,7 +64,6 @@ define([
 		$(this).css("opacity", "1");
 	});
 
-
 	/*restart*/
 	$("#restart-btn").on("touchstart", function() {
 		$(this).css("opacity", "0.5");
@@ -80,6 +85,10 @@ define([
 			console.log(answer);
 		});
 	});
+	// Hammer($("#left-btn")).on("hold", function(event) {
+	// 	event.preventDefault();
+	// });
+
 
 	$("#right-btn").on("touchstart", function() {
 		$(this).css("opacity", "0.5");
@@ -90,7 +99,9 @@ define([
 			console.log(answer);
 		});
 	});
-	
+	// Hammer($("#right-btn")).on("hold", function(event) {
+	// 	event.preventDefault();
+	// });
 
 	// Инициализация
 	init = function(){
