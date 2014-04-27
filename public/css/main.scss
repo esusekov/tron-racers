@@ -1,37 +1,48 @@
+$font-family: "Comic Sans MS";
+$color-scheme: #01B8E4;
+
+@mixin background($address) { 
+  background: url("images/#{$address}.png");
+}
+
+@mixin background-color($opacity) {
+  background-color: rgba(255, 255, 255, $opacity);
+}
+  
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  background: url(images/black-Linen.png) 
+  @include background(black-Linen); 
 }
 
 h1 {
   font-size: 75px;
-  margin-top: 25px;
-  margin-bottom: 150px;
+  margin: {
+    top: 25px;
+    bottom: 150px; 
+  }
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 50px; 
 }
 
 h4 {
   font-size: 20px;
-  font-family: 'Comic Sans MS';
-  color: #01B8E4;
-  text-shadow: 0 0 10px #000, 0 0 20px #01B8E4;
+  font-family: $font-family;
+  color: $color-scheme;
+  text-shadow: 0 0 10px black, 0 0 20px $color-scheme;
   margin-bottom: 5px;
 }
 
 h5 {
-  font-size: 20px;
-  font-family: 'Comic Sans MS';
+  @extend h4;
   color: #FF6347;
-  text-shadow: 0 0 10px #000, 0 0 20px #01B8E4;
-  margin-bottom: 5px;
 }
+
 p {
   height: 70px;
   margin-bottom: 20px;
@@ -39,74 +50,58 @@ p {
 
 table {
   margin: auto;
-  margin-top: -80px;
-  margin-bottom: 50px;
+  margin: {
+    top: -80px;
+    bottom: 50px; 
+  }
+}
+
+li {
+  display: inline;
+  text-decoration: none;
 }
 
 .window {
   margin: 50px auto;
-  text-align: center;
-  background: url("images/main-img.png");
   height: 650px;
   width: 600px;
-  border: 2px solid #000; 
+  text-align: center;
+  @include background(main-img);
+  border: 2px solid #000;
   border-radius: 15px;
-  box-shadow: 0 0 15px #01B8E4;
+  box-shadow: 0 0 15px $color-scheme; 
 }
 
-
 .window__headers {
-  font-family: 'Comic Sans MS';
-  color: #01B8E4;
-  text-shadow: 0 0 10px #000, 0 0 20px #01B8E4;
+  font-family: $font-family;
+  color: $color-scheme;
+  text-shadow: 0 0 10px black, 0 0 20px $color-scheme;
 }
 
 .window__button {
+  @extend .window__headers;
   font-size: 50px;
-  font-family: 'Comic Sans MS';
-  color: #01B8E4;
-  text-shadow: 0 0 10px #000, 0 0 20px #01B8E4;
   text-decoration: none;
-}
-
-
-.window__button:hover {
-  font-size: 55px;
-}
-
-.window__button:active {
-  position: relative;
-  top: 1px; 
+  &:hover {
+    font-size: 55px;
+  }
+  &:active {
+    position: relative;
+    top: 1px;
+  }
 }
 
 .window__input {
   width: 150px;
   height: 40px;
-  border: 2px solid #01B8E4;
+  border: 2px solid $color-scheme;
   border-radius: 3px;
-  color: #01B8E4;
+  color: $color-scheme;
   padding: 3px;
   font-size: 25px;
   font-family: Verdana;
-  background: #FFF;
+  background: white;
   opacity: 0.8;
-}
-
-/*#save {
-  float: left;
-  margin-left: 90px;
-  width: 100px;
-}*/
-
-/*#button {
-  float: left;
-  margin-left: 140px;
-  width: 100px;
-}*/
-
-li {
-  display: inline;
-  text-decoration: none;
 }
 
 .buttons__left {
@@ -116,8 +111,7 @@ li {
 }
 
 .buttons__right {
-  width: 300px;
-  height: 70px;
+  @extend .buttons__left;
   float: right;
 }
 
@@ -135,7 +129,7 @@ li {
 .window__loading {
   height: 180px;
   width: 300px;
-  background-color: rgba(255, 255, 255, 0.8);
+  @include background-color(0.8);
   padding-top: 100px;
   border-radius: 15px;
   margin: auto; 
@@ -145,40 +139,40 @@ li {
   height: 265px;
   width: 300px;
   padding-top: 0px;
-  background-color: rgba(255, 255, 255, 0.2);
+  @include background-color(0.2);
   border-radius: 15px;
   margin: auto;
-  margin-bottom: 10px; 
-  margin-top: -50px;
+  margin: {
+    bottom: 10px;
+    top: -50px;
+  }
 }
 
 p.window__headers {
+  @extend .window__headers;
   font-size: 30px;
-  margin-top: 50px;
-  margin-bottom: 100px;
-  font-family: 'Comic Sans MS';
-  color: #01B8E4;
-  text-shadow: 0 0 10px #000, 0 0 20px #01B8E4;
+  margin: {
+    top: 50px;
+    bottom: 100px;
+  }
 }
 
 h1.window__headers__fix {
+  @extend .window__headers;
   font-size: 75px;
   margin-top: 25px;
   margin-bottom: 50px;
-  font-family: 'Comic Sans MS';
-  color: #01B8E4;
-  text-shadow: 0 0 10px #000, 0 0 20px #01B8E4;
 }
 
 .window__table {
   width: 300px;
-  background-color: rgba(255, 255, 255, 0.9);
+  @include background-color(0.9);
   margin: auto;
-  border: 2px solid #01B8E4;
+  border: 2px solid $color-scheme;
   border-radius: 15px;  
 }
 
 .window__table__td, .window__table__th {
-  color: #000;
+  color: black;
   padding: 3px; 
 }

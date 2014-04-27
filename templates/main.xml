@@ -7,9 +7,9 @@
     	<h5>tron-racers.herokuapp.com/joystick</h5>
     	<h4>Enter game code:</h4>
 		<h5 id="message"> </h5>
+		<h4><a href="#game">or play without mobile phone</a></h4>
 	</div>
 	<p id="start-game" style="display: none;"><a href="#game"  class="window__button">Start Game</a></p>
 	<p><a href="#scoreboard" class="window__button">Score Board</a></p>
     
 </fest:template>
-

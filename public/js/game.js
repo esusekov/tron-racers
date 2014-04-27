@@ -475,7 +475,7 @@ function clearField(field, N) {
 function gameStop(flag) {
 	document.onkeyup = null;
 	coursesForTouch = function(msg) {return;};
-	button.value = "START";
+	button.innerHTML = "Start";
 	button.setAttribute('onClick', 'gameStart()');
 	clearTimeout(refreshIntervalId);
 	if (flag == 1) {
@@ -503,7 +503,7 @@ function gameStop(flag) {
 function gameStart() {
 	document.onkeyup = courseBike;
 	coursesForTouch = courseBikeTouch;
-	button.value = "PAUSE";
+	button.innerHTML = "Pause";
 	button.setAttribute('onClick', 'gameStop(0)');
 	refreshIntervalId = setInterval(draw, speed);
 }
