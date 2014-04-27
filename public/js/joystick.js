@@ -96,7 +96,7 @@ define([
 	init = function(){
 		//message.innerHTML = 'ready';
 		// Если id нет
-		if (!localStorage.getItem('playerguid')){
+		if (!sessionStorage.getItem('playerguid')){
 			// Ждем ввода токена
 			input.parentNode.addEventListener('submit', function(e){
 				e.preventDefault();
@@ -119,7 +119,7 @@ define([
 	// Переподключение
 	// Используем сохранненный id связки
 	reconnect = function(){
-		server.bind({guid: localStorage.getItem('playerguid')}, function(data){
+		server.bind({guid: sessionStorage.getItem('playerguid')}, function(data){
 			// Если все ок
 			if (data.status == 'success'){
 				// Стартуем
@@ -127,7 +127,7 @@ define([
 			// Если связки уже нет
 			} else if (data.status == 'undefined guid'){
 				// Начинаем все заново
-				localStorage.removeItem('playerguid');
+				sessionStorage.removeItem('playerguid');
 				init();
 			}
 		});
@@ -137,7 +137,7 @@ define([
 	start = function(guid){
 		console.log('start player');
 		// Сохраняем id связки
-		localStorage.setItem('playerguid', guid);
+		sessionStorage.setItem('playerguid', guid);
 		$("#connection").hide();
 		$("#joystick").show();
 		//message.innerHTML = 'game';
@@ -155,6 +155,7 @@ define([
 
 	window.server = server;
 
+	
 	/*
 	server.send('message', function(answer){
 		console.log(answer);
