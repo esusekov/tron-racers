@@ -17124,6 +17124,7 @@ define('main',[
 ){
     Backbone.history.start();
     localStorage.setItem("savedData", JSON.stringify([]));
+    
     $(function() {
         var message = document.getElementById('message');
         var start, init, reconnect;
@@ -17144,7 +17145,7 @@ define('main',[
         var init = function(){
             message.innerHTML = 'ready';
             // Если id нет
-            if (!localStorage.getItem('consoleguid')){
+            if (!sessionStorage.getItem('consoleguid')){
                 // Получаем токен
                 server.getToken(function(token){
                     message.innerHTML = token;
@@ -17158,7 +17159,7 @@ define('main',[
         // Переподключение
         var reconnect = function(){
             // Используем сохранненный id связки
-            server.bind({guid: localStorage.getItem('consoleguid')}, function(data){
+            server.bind({guid: sessionStorage.getItem('consoleguid')}, function(data){
                 // Если все ок
                 if (data.status == 'success'){
                     // Стартуем
@@ -17166,7 +17167,7 @@ define('main',[
                 // Если связки уже нет
                 } else if (data.status == 'undefined guid'){
                     // Начинаем все заново
-                    localStorage.removeItem('consoleguid');
+                    sessionStorage.removeItem('consoleguid');
                     init();
                 }
             });
@@ -17178,7 +17179,7 @@ define('main',[
         var start = function(guid){
             console.log('start console');
             // Сохраняем id связки
-            localStorage.setItem('consoleguid', guid);
+            sessionStorage.setItem('consoleguid', guid);
             $("#info-connect").hide();
             $("#start-game").show();
         };
