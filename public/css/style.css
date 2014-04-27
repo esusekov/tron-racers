@@ -57,6 +57,9 @@
 
 /*css for screens with width = 1920x1080*/
 @media screen and (min-height: 1500px) {
+	html {
+		-webkit-text-size-adjust: none;
+	}
 	.container {
 		width: 1920;
 		height: 1080;
@@ -68,7 +71,7 @@
 	}
 
 	.nav__list > li > img {
-		height: 200;
+		height: 200px;
 	}
 
 	.pointer-right__img-right, .pointer-left__img-left {
@@ -103,10 +106,48 @@
 }
 
 .nav__list li {
-	margin-left: 10%;
-	margin-right: 11%;
+	margin-left: 7%;
+	margin-right: 7%;
 	display: inline;
 }
 
+.connection-form {
+	text-align: center;
+	position:relative;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	transform: translateY(-50%);
+	
+  	font-family: 'Comic Sans MS';
+  	color: #01B8E4;
+  	text-shadow: 0 0 10px #000, 0 0 20px #01B8E4;
+}
 
+.id-token {
+	width: 35%;
+	border: 2px solid #01B8E4;
+  	border-radius: 3px;
+  	color: #01B8E4;
+  	padding: 3px;
+  	font-size: 25px;
+  	font-family: Verdana;
+  	background: #FFF;
+  	opacity: 0.8;
+  	margin-bottom: 5%;
+}
 
+.window__button {
+  font-size: 50px;
+  font-family: 'Comic Sans MS';
+  color: #01B8E4;
+  background-color: rgba(0, 0, 0, 0.0);
+  /*text-shadow: 0 0 10px #000, 0 0 20px #01B8E4;*/
+  text-decoration: none; }
+
+.window__button:hover {
+  font-size: 55px; }
+
+.window__button:active {
+  position: relative;
+  top: 1px; }

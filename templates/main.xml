@@ -4,7 +4,7 @@
     <h1 class="window__headers">TRON RACERS</h1>
     <div id="info-connect">
     	<h4>Enter this web address in your mobile browser:</h4>
-    	<h5>tron-racers.herokuapp.com</h5>
+    	<h5>tron-racers.herokuapp.com/joystick</h5>
     	<h4>Enter game code:</h4>
 		<h5 id="message"> </h5>
 	</div>

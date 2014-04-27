@@ -10,6 +10,9 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 	</head>
 	<body>
+		<div id="loader" class="loader">
+			<img src="css/images/loading.gif"/>
+		</div>
 		<fest:if test="json.development">
 			<script data-main="js/main" src="js/lib/require.js"></script>
 		</fest:if>
@@ -22,6 +25,7 @@
 				require(['main'], function(){
 					console.timeEnd('load');
 				});
+				$("#loader").hide();
 			</script>
 		</fest:if>
 	</body>

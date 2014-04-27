@@ -9,25 +9,26 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="nav">
-				<ul class="nav__list">
-					<li><img src="/js/images/connect.png" class="nav__list__connect-disconnect"/></li>
-					<li><img src="/js/images/play.png" id="play-btn" class="nav__list__play-pause"/></li>
-					<li><img src="/js/images/restart.png" id="restart-btn" class="nav_list__restart"/></li>
-				</ul>
+			<div id="joystick" style="display: none;">
+				<div class="nav">
+					<ul class="nav__list">
+						<li><img src="/js/images/connect.png" class="nav__list__connect-disconnect"/></li>
+						<li><img src="/js/images/play.png" id="play-btn" class="nav__list__play-pause"/></li>
+						<li><img src="/js/images/restart.png" id="restart-btn" class="nav_list__restart"/></li>
+					</ul>
+				</div>
+				<div class="pointer-left">
+					<img class="pointer-left__img-left" id="left-btn" src="/js/images/left.png"/>
+				</div>
+				<div class="pointer-right">
+					<img class="pointer-right__img-right" id="right-btn" src="/js/images/right.png"/>
+				</div>
 			</div>
-			<div class="pointer-left">
-				<img class="pointer-left__img-left" id="left-btn" src="/js/images/left.png"/>
-			</div>
-			<div class="pointer-right">
-				<img class="pointer-right__img-right" id="right-btn" src="/js/images/right.png"/>
-			</div>
+			<form id="connection" class="connection-form">
+				<input id="token" class="id-token"/>
+				<p><button id="connect" type="submit" class="window__button">Connect</button></p>
+			</form>
 		</div>
-		<form>
-			<input id="token" />
-			<button id="connect" type="submit">connect</button>
-		</form>
-		<div id="message"></div>
 		<script data-main="/js/joystick" src="/js/lib/require.js"></script>
 	</body>
 </html>

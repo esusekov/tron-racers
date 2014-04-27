@@ -28,7 +28,7 @@ define([
 ], function(
     Connector
 ){
-	var message = document.getElementById('message');
+	//var message = document.getElementById('message');
 	var input = document.getElementById('token');
 	var start, init, reconnect;
 
@@ -94,7 +94,7 @@ define([
 
 	// Инициализация
 	init = function(){
-		message.innerHTML = 'ready';
+		//message.innerHTML = 'ready';
 		// Если id нет
 		if (!localStorage.getItem('playerguid')){
 			// Ждем ввода токена
@@ -138,7 +138,9 @@ define([
 		console.log('start player');
 		// Сохраняем id связки
 		localStorage.setItem('playerguid', guid);
-		message.innerHTML = 'game';
+		$("#connection").hide();
+		$("#joystick").show();
+		//message.innerHTML = 'game';
 	};
 
 	server.on('reconnect', reconnect);
