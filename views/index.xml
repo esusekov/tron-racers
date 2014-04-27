@@ -10,9 +10,9 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 	</head>
 	<body>
-		<div id="loader" class="loader">
+		<!--<div id="loader" class="loader">
 			<img src="css/images/loading.gif"/>
-		</div>
+		</div>-->
 		<fest:if test="json.development">
 			<script data-main="js/main" src="js/lib/require.js"></script>
 		</fest:if>
