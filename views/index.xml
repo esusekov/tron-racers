@@ -25,7 +25,7 @@
 				require(['main'], function(){
 					console.timeEnd('load');
 				});
-				$("#loader").hide();
+				//$("#loader").hide();
 			</script>
 		</fest:if>
 	</body>
