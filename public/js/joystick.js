@@ -112,6 +112,7 @@ define([
 
 
 	$("#right-btn").on("touchstart", function() {
+		e.preventDefault();
 		$(this).css("opacity", "0.5");
 	});
 	$("#right-btn").on("touchmove", function(e) {
