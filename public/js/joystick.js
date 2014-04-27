@@ -119,6 +119,7 @@ define([
 		$(this).css("opacity", "1");
 	});
 	$("#right-btn").on("touchend", function() {
+		e.preventDefault();
 		$(this).css("opacity", "1");
 		server.send('right', function(answer){
 			console.log(answer);
