@@ -5,7 +5,7 @@
 
 @media only screen and (orientation:landscape) {
 	/*css for screens with max width = 480*/
-	@media only screen and (device-width : 480px) {
+	@media only screen and (device-width : 480px) and (orientation:landscape){
 		.container {
 			width: 480px;
 			height: 320px;
@@ -35,7 +35,7 @@
 	}
 
 	/*css for screens with min width = 481*/
-	@media only screen and (device-width: 640px) {
+	@media only screen and (device-width: 640px) and (orientation:landscape){
 		.container {
 			width: 640px;
 			height: 360px;
@@ -64,7 +64,7 @@
 		}
 	}
 
-	@media only screen and (device-width: 568px) {
+	@media only screen and (device-width: 568px) and (orientation:landscape){
 		.container {
 			width: 568px;
 			height: 320px;
@@ -152,11 +152,11 @@
 
 .connection-form {
 	text-align: center;
-	position:relative;
+	/*position:relative;
 	top: 50%;
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
-	transform: translateY(-50%);
+	transform: translateY(-50%);*/
 	
   	font-family: 'Comic Sans MS';
   	color: #01B8E4;
