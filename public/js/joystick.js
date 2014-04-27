@@ -49,6 +49,11 @@ define([
 		e.preventDefault();
 		$(this).css("opacity", "0.5");
 	});
+	$("#play-btn").on("touchmove", function(e) {
+		e.preventDefault();
+		
+		$(this).css("opacity", "1");
+	});
 	$("#play-btn").on("touchend", function(e) {
 		e.preventDefault();
 		if ($(this).attr("src") == "/js/images/play.png") {
@@ -71,6 +76,11 @@ define([
 		e.preventDefault();
 		$(this).css("opacity", "0.5");
 	});
+	$("#restart-btn").on("touchmove", function(e) {
+		e.preventDefault();
+		
+		$(this).css("opacity", "1");
+	});
 	$("#restart-btn").on("touchend", function(e) {
 		e.preventDefault();
 		$(this).css("opacity", "1");
@@ -83,6 +93,11 @@ define([
 	$("#left-btn").on("touchstart", function(e) {
 		e.preventDefault();
 		$(this).css("opacity", "0.5");
+	});
+	$("#left-btn").on("touchmove", function(e) {
+		e.preventDefault();
+		
+		$(this).css("opacity", "1");
 	});
 	$("#left-btn").on("touchend", function(e) {
 		e.preventDefault();
@@ -98,6 +113,10 @@ define([
 
 	$("#right-btn").on("touchstart", function() {
 		$(this).css("opacity", "0.5");
+	});
+	$("#right-btn").on("touchmove", function(e) {
+		e.preventDefault();
+		$(this).css("opacity", "1");
 	});
 	$("#right-btn").on("touchend", function() {
 		$(this).css("opacity", "1");
