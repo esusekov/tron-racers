@@ -166,6 +166,7 @@
 	
 	.nav-portrait {
 		padding-top: 33%;
+		padding-bottom: 33%;
 		text-align: center;
 		font-size: 25px;
 		color: #01172C;
@@ -173,7 +174,6 @@
 
 	.nav-portrait > img {
 		height: 33%;
-		width: auto;
 		margin-top: 50px;
 	}
 
