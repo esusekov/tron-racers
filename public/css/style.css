@@ -4,13 +4,18 @@
 }
 
 @media only screen and (orientation:landscape) {
+	body {
+		height: 100%;
+  		width: 100%;
+		background: url(images/mochaGrunge.png);
+	}
 	/*css for screens with max width = 480*/
 	@media only screen and (max-width : 320px){
-		.container {
+		/*.container {
 			width: 480px;
 			height: 320px;
 			background: url(images/mochaGrunge.png);
-		}
+		}*/
 		
 		.nav-landscape {
 			border-bottom: 5px solid  #01172C;
@@ -34,11 +39,11 @@
 		}
 	}
 	@media only screen and (max-width : 480px){
-		.container {
+		/*.container {
 			width: 480px;
 			height: 320px;
 			background: url(images/mochaGrunge.png);
-		}
+		}*/
 		
 		.nav-landscape {
 			border-bottom: 5px solid  #01172C;
@@ -64,11 +69,11 @@
 
 	/*css for screens with min width = 481*/
 	@media only screen and (max-width: 640px) and (min-width: 481px){
-		.container {
+		/*.container {
 			width: 640px;
 			height: 300px;
 			background: url(images/mochaGrunge.png);
-		}
+		}*/
 
 		.nav-landscape {
 			border-bottom: 5px solid  #01172C;
@@ -93,11 +98,11 @@
 	}
 
 	@media only screen and (device-width: 568px){
-		.container {
+		/*.container {
 			width: 568px;
 			height: 320px;
 			background: url(images/mochaGrunge.png);
-		}
+		}*/
 
 		.nav-landscape {
 			border-bottom: 5px solid  #01172C;
@@ -173,7 +178,7 @@
 	}
 
 	.nav-portrait > img {
-		height: 33%;
+		height: 150px;
 		margin-top: 50px;
 	}
 
