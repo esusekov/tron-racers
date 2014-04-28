@@ -106,6 +106,39 @@
 		}
 	}
 
+	@media only screen and (max-width: 1600px) and (min-width: 641px){
+		/*.container {
+			width: 568px;
+			height: 320px;
+			background: url(images/mochaGrunge.png);
+		}*/
+		.container {
+			height: 100%;
+  			width: 100%;
+		}
+		.nav-landscape {
+			border-bottom: 5px solid  #01172C;
+			height: 23%;
+		}
+
+		.nav__list > li > img {
+			height: 80px;
+		}
+
+		.pointer-right__img-right, .pointer-left__img-left {
+			margin-top: 40%;
+			vertical-align: middle;
+			width: 360px;
+		}
+
+		.nav__list li {
+			margin-left: 8%;
+			margin-right: 8%;
+			display: inline;
+		}
+
+	}
+
 	@media only screen and (device-width: 568px){
 		/*.container {
 			width: 568px;
