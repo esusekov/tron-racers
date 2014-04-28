@@ -53,10 +53,10 @@ define([
     	var gamma = Math.round(event.gamma/10)*10;
     	var beta = Math.round(event.beta/10)*10;
     	var turn = "rotateX(" + gamma +"deg)" + " rotateY(" + beta +"deg)";
-    	$("#left-btn").css("transform", turn);
-    	$("#left-btn").css("-webkit-transform", turn);
-    	$("#right-btn").css("transform", turn);
-    	$("#right-btn").css("-webkit-transform", turn);
+    	$("#left-btn-img").css("transform", turn);
+    	$("#left-btn-img").css("-webkit-transform", turn);
+    	$("#right-btn-img").css("transform", turn);
+    	$("#right-btn-img").css("-webkit-transform", turn);
 	});
 
 	$("#play-btn").on("touchstart", function(e) {
