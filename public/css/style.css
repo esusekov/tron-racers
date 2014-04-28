@@ -16,7 +16,10 @@
 			height: 320px;
 			background: url(images/mochaGrunge.png);
 		}*/
-		
+		.container {
+			height: 100%;
+  			width: 100%;
+		}
 		.nav-landscape {
 			border-bottom: 5px solid  #01172C;
 			height: 22%;
@@ -44,7 +47,10 @@
 			height: 320px;
 			background: url(images/mochaGrunge.png);
 		}*/
-		
+		.container {
+			height: 100%;
+  			width: 100%;
+		}
 		.nav-landscape {
 			border-bottom: 5px solid  #01172C;
 			height: 22%;
@@ -74,7 +80,10 @@
 			height: 300px;
 			background: url(images/mochaGrunge.png);
 		}*/
-
+		.container {
+			height: 100%;
+  			width: 100%;
+		}
 		.nav-landscape {
 			border-bottom: 5px solid  #01172C;
 			height: 23%;
@@ -103,7 +112,10 @@
 			height: 320px;
 			background: url(images/mochaGrunge.png);
 		}*/
-
+		.container {
+			height: 100%;
+  			width: 100%;
+		}
 		.nav-landscape {
 			border-bottom: 5px solid  #01172C;
 			height: 23%;
