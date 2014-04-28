@@ -49,6 +49,15 @@ define([
 		e.preventDefault();
 	});
 
+	window.addEventListener('deviceorientation', function(event) {
+    	console.log(event.gamma);
+    	var turn = "rotateX(" + event.gamma +"deg)";
+    	$("#left-btn").css("transform", turn);
+    	$("#left-btn").css("-webkit-transform", turn);
+    	$("#right-btn").css("transform", turn);
+    	$("#right-btn").css("-webkit-transform", turn);
+	});
+
 	$("#play-btn").on("touchstart", function(e) {
 		e.preventDefault();
 		$(this).css("opacity", "0.5");
