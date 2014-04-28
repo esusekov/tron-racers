@@ -45,6 +45,10 @@ define([
 		}
 	);
 
+	window.addEventListener("touchmove", function(e) {
+		e.preventDefault();
+	});
+
 	$("#play-btn").on("touchstart", function(e) {
 		e.preventDefault();
 		$(this).css("opacity", "0.5");
