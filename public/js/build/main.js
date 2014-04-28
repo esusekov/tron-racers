@@ -12666,7 +12666,7 @@ define('views/main',[
     Backbone,
     tmpl
 ){
-
+    
     var View = Backbone.View.extend({
         
         template: tmpl,
@@ -12712,11 +12712,12 @@ define('views/game',[
             this.render();
         },*/
         events: {
-            "keypress :input": function (e) {
+            "keypress": function (e) {
                 if (e.which === 114) {
                     console.log('Rtest');
-                    stop(-2); //возможно стоит поправить, с модульностью беда
+                    gameStop(-2); //возможно стоит поправить, с модульностью беда
                 }
+                console.log(e.which);
             }
         },
         render: function () {
@@ -13040,7 +13041,6 @@ define('router',[
     gameOverView
 ){
     viewManager.registerViews([mainView, gameView, scoreboardView, gameOverView]);
-
     var Router = Backbone.Router.extend({
         routes: {
             'scoreboard': 'scoreboardAction',
@@ -17182,19 +17182,22 @@ define('main',[
             sessionStorage.setItem('consoleguid', guid);
             $("#info-connect").hide();
             $("#start-game").show();
+            window.location = "/#game";
         };
 
         init();
 
         // Обмен сообщениями
         server.on('message', function(data, answer){
-            switch (data) {
-                case 'play': gameStart(); answer(data); break;
-                case 'pause': gameStop(0); answer(data); break;
-                case 'restart': gameStop(-2); answer(data); break;
-                default: coursesForTouch(data); answer(data);
+            if ((window.location.href.indexOf("game") > -1) &&
+                ($('#gameview').css("display") != "none")) {
+                switch (data) {
+                    case 'play': gameStart(); answer(data); break;
+                    case 'pause': gameStop(0); answer(data); break;
+                    case 'restart': gameStop(-2); answer(data); break;
+                    default: coursesForTouch(data); answer(data);
+                }
             }
-            
         });
 
         window.server = server;

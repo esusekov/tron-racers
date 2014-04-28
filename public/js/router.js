@@ -14,7 +14,6 @@ define([
     gameOverView
 ){
     viewManager.registerViews([mainView, gameView, scoreboardView, gameOverView]);
-
     var Router = Backbone.Router.extend({
         routes: {
             'scoreboard': 'scoreboardAction',

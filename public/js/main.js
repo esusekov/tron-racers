@@ -97,13 +97,15 @@ define([
 
         // Обмен сообщениями
         server.on('message', function(data, answer){
-            switch (data) {
-                case 'play': gameStart(); answer(data); break;
-                case 'pause': gameStop(0); answer(data); break;
-                case 'restart': gameStop(-2); answer(data); break;
-                default: coursesForTouch(data); answer(data);
+            if ((window.location.href.indexOf("game") > -1) &&
+                ($('#gameview').css("display") != "none")) {
+                switch (data) {
+                    case 'play': gameStart(); answer(data); break;
+                    case 'pause': gameStop(0); answer(data); break;
+                    case 'restart': gameStop(-2); answer(data); break;
+                    default: coursesForTouch(data); answer(data);
+                }
             }
-            
         });
 
         window.server = server;

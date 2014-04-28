@@ -484,7 +484,7 @@ function gameStop(flag) {
 		var gov = document.getElementById("gameOverview");
 		gov.style.display = "";
 		var newScore = document.getElementById("newScore");
-		newScore.innerHTML = "" + Math.floor(5000 - 600*Math.log(count));
+		newScore.innerHTML = "" + Math.floor(5000 - 300*Math.log(count));
 		count = 0;
 		server.send('gameover', function(answer){
 			console.log(answer);

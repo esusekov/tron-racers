@@ -7,7 +7,6 @@ require.config({
         backbone: "/js/lib/backbone",
         Connector: "/js/lib/Connector",
         FnQuery: "/js/lib/FnQuery",
-        hammer: "/js/lib/hammer",
         "socket.io": "/socket.io/socket.io"
     },
     shim: {
@@ -20,24 +19,18 @@ require.config({
         },
         "socket.io": {
             exports: "io"
-        },
-        "hammer": {
-            exports: "Hammer"
         }
     }
 });
 
 define([
-    'Connector',
-    'hammer'
+    'Connector'
 ], function(
-    Connector,
-    Hammer
+    Connector
 ){
 	//var message = document.getElementById('message');
 	var input = document.getElementById('token');
 	var start, init, reconnect;
-
 	// Создаем связь с сервером
 	var server = new Connector({
 			server: ['bind'],
