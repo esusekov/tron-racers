@@ -50,8 +50,9 @@ define([
 	});
 
 	window.addEventListener('deviceorientation', function(event) {
-    	console.log(event.gamma);
-    	var turn = "rotateX(" + event.gamma +"deg)" + " rotateY(" + event.beta +"deg)";
+    	var gamma = Math.round(event.gamma*2/10)*10/2;
+    	var beta = Math.round(event.beta*2/10)*10/2;
+    	var turn = "rotateX(" + gamma +"deg)" + " rotateY(" + beta +"deg)";
     	$("#left-btn").css("transform", turn);
     	$("#left-btn").css("-webkit-transform", turn);
     	$("#right-btn").css("transform", turn);
