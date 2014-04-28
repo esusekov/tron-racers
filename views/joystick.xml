@@ -21,11 +21,11 @@
 						<li><img src="/js/images/restart.png" id="restart-btn" class="nav_list__restart"/></li>
 					</ul>
 				</div>
-				<div class="pointer-left">
-					<img class="pointer-left__img-left" id="left-btn" src="/js/images/left.png"/>
+				<div class="pointer-left" id="left-btn">
+					<img class="pointer-left__img-left" id="left-btn-img" src="/js/images/left.png"/>
 				</div>
-				<div class="pointer-right">
-					<img class="pointer-right__img-right" id="right-btn" src="/js/images/right.png"/>
+				<div class="pointer-right" id="right-btn">
+					<img class="pointer-right__img-right" id="right-btn-img" src="/js/images/right.png"/>
 				</div>
 			</div>
 			<form id="connection" class="connection-form">

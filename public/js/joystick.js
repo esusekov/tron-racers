@@ -50,8 +50,8 @@ define([
 	});
 
 	window.addEventListener('deviceorientation', function(event) {
-    	var gamma = Math.round(event.gamma*2/10)*10/2;
-    	var beta = Math.round(event.beta*2/10)*10/2;
+    	var gamma = Math.round(event.gamma/10)*10;
+    	var beta = Math.round(event.beta/10)*10;
     	var turn = "rotateX(" + gamma +"deg)" + " rotateY(" + beta +"deg)";
     	$("#left-btn").css("transform", turn);
     	$("#left-btn").css("-webkit-transform", turn);
@@ -106,16 +106,16 @@ define([
 	/*button left and right*/
 	$("#left-btn").on("touchstart", function(e) {
 		e.preventDefault();
-		$(this).css("opacity", "0.5");
+		$("#left-btn-img").css("opacity", "0.5");
 	});
 	$("#left-btn").on("touchmove", function(e) {
 		e.preventDefault();
 		
-		$(this).css("opacity", "1");
+		$("#left-btn-img").css("opacity", "1");
 	});
 	$("#left-btn").on("touchend", function(e) {
 		e.preventDefault();
-		$(this).css("opacity", "1");
+		$("#left-btn-img").css("opacity", "1");
 		server.send('left', function(answer){
 			console.log(answer);
 		});
@@ -127,15 +127,15 @@ define([
 
 	$("#right-btn").on("touchstart", function(e) {
 		e.preventDefault();
-		$(this).css("opacity", "0.5");
+		$("#right-btn-img").css("opacity", "0.5");
 	});
 	$("#right-btn").on("touchmove", function(e) {
 		e.preventDefault();
-		$(this).css("opacity", "1");
+		$("#right-btn-img").css("opacity", "1");
 	});
 	$("#right-btn").on("touchend", function(e) {
 		e.preventDefault();
-		$(this).css("opacity", "1");
+		$("#right-btn-img").css("opacity", "1");
 		server.send('right', function(answer){
 			console.log(answer);
 		});
