@@ -16,11 +16,12 @@ define([
             this.render();
         },*/
         events: {
-            "keypress :input": function (e) {
+            "keypress": function (e) {
                 if (e.which === 114) {
                     console.log('Rtest');
-                    stop(-2); //возможно стоит поправить, с модульностью беда
+                    gameStop(-2); //возможно стоит поправить, с модульностью беда
                 }
+                console.log(e.which);
             }
         },
         render: function () {

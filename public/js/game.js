@@ -486,9 +486,15 @@ function gameStop(flag) {
 		var newScore = document.getElementById("newScore");
 		newScore.innerHTML = "" + Math.floor(5000 - 600*Math.log(count));
 		count = 0;
+		server.send('gameover', function(answer){
+			console.log(answer);
+		});
 		draw();
 	}
 	if (flag == -1) {
+		server.send('gameover', function(answer){
+			console.log(answer);
+		});
 		count = 0;
 	}
     if (flag == -2) {
@@ -496,6 +502,9 @@ function gameStop(flag) {
         playerBike.setRandomValue();
         botBike.setRandomValue();
         clearField(field, N);
+        server.send('gameover', function(answer){
+			console.log(answer);
+		});
         draw();
     }
 }

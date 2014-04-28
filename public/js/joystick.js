@@ -72,15 +72,11 @@ define([
 		e.preventDefault();
 		if ($(this).attr("src") == "/js/images/play.png") {
 			$(this).attr("src", "/js/images/pause.png");
-			server.send('play', function(answer){
-				console.log(answer);
-			});
+			sendMsg('play');
 		}
 		else {
 			$(this).attr("src", "/js/images/play.png");
-			server.send('pause', function(answer){
-				console.log(answer);
-			});
+			sendMsg('pause');
 		}
 		$(this).css("opacity", "1");
 	});
@@ -98,9 +94,7 @@ define([
 	$("#restart-btn").on("touchend", function(e) {
 		e.preventDefault();
 		$(this).css("opacity", "1");
-		server.send('restart', function(answer){
-			console.log(answer);
-		});
+		sendMsg('restart');
 	});
 
 	/*button left and right*/
@@ -116,9 +110,7 @@ define([
 	$("#left-btn").on("touchend", function(e) {
 		e.preventDefault();
 		$("#left-btn-img").css("opacity", "1");
-		server.send('left', function(answer){
-			console.log(answer);
-		});
+		sendMsg('left');
 	});
 	// Hammer($("#left-btn")).on("hold", function(event) {
 	// 	event.preventDefault();
@@ -136,14 +128,17 @@ define([
 	$("#right-btn").on("touchend", function(e) {
 		e.preventDefault();
 		$("#right-btn-img").css("opacity", "1");
-		server.send('right', function(answer){
-			console.log(answer);
-		});
+		sendMsg('right');
 	});
 	// Hammer($("#right-btn")).on("hold", function(event) {
 	// 	event.preventDefault();
 	// });
-
+	
+	sendMsg = function(msg){
+		server.send(msg, function(answer){
+			console.log(answer);
+		});
+	};
 	// Инициализация
 	init = function(){
 		//message.innerHTML = 'ready';
@@ -201,8 +196,12 @@ define([
 
 	// Обмен сообщениями
 	server.on('message', function(data, answer){
-		console.log('message', data);
-		answer('answer');
+		switch (data) {
+            case 'gameover': 
+            	$("#play-btn").attr("src", "/js/images/play.png");
+            	answer(data); break;
+            default: answer(data);
+        }
 	});
 
 	window.server = server;

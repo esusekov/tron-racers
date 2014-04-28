@@ -90,6 +90,7 @@ define([
             sessionStorage.setItem('consoleguid', guid);
             $("#info-connect").hide();
             $("#start-game").show();
+            window.location = "/#game";
         };
 
         init();
