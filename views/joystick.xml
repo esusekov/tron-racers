@@ -5,6 +5,7 @@
 		<meta charset="utf-8" />
 		<title><fest:value>json.title</fest:value></title>
 		<meta name="viewport" content="initial-scale=1.0,user-scalable=no, maximum-scale=1, minimum-scale=1"/>
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	</head>
 	<body>
@@ -14,7 +15,7 @@
 		</div>
 		<div class="container">
 			<div id="joystick" style="display: none;">
-				<div class="nav">
+				<div class="nav-landscape">
 					<ul class="nav__list">
 						<li><img src="/js/images/connect.png" class="nav__list__connect-disconnect"/></li>
 						<li><img src="/js/images/play.png" id="play-btn" class="nav__list__play-pause"/></li>
