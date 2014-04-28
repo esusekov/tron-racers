@@ -5,6 +5,34 @@
 
 @media only screen and (orientation:landscape) {
 	/*css for screens with max width = 480*/
+	@media only screen and (max-width : 320px){
+		.container {
+			width: 480px;
+			height: 320px;
+			background: url(images/mochaGrunge.png);
+		}
+		
+		.nav-landscape {
+			border-bottom: 5px solid  #01172C;
+			height: 22%;
+		}
+		
+		.pointer-right__img-right, .pointer-left__img-left {
+			width: 200px;
+			margin-top: 20%;
+			vertical-align: middle;
+		}
+
+		.nav__list > li > img {
+			height: 70px;
+		}
+
+		.nav__list li {
+			margin-left: 7%;
+			margin-right: 7%;
+			display: inline;
+		}
+	}
 	@media only screen and (max-width : 480px){
 		.container {
 			width: 480px;
