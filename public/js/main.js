@@ -39,7 +39,7 @@ define([
     Backbone.history.start();
     localStorage.setItem("savedData", JSON.stringify([]));
     
-    $(function() {
+    //$(function() {
 
         if (checkTechs.checkApp()) {
             console.log("modern");
@@ -140,5 +140,5 @@ define([
             console.log(answer);
         });
         */
-    });
+    //});
 });

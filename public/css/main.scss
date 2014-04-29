@@ -134,6 +134,7 @@ li {
   width: 300px;
   @include background-color(0.8);
   padding-top: 100px;
+  border: 2px solid $color-scheme;
   border-radius: 15px;
   margin: auto; 
 }

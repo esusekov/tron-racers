@@ -97,6 +97,7 @@ li {
   width: 300px;
   background-color: rgba(255, 255, 255, 0.8);
   padding-top: 100px;
+  border: 2px solid #01b8e4;
   border-radius: 15px;
   margin: auto; }
 
