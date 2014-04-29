@@ -33,7 +33,7 @@
 	</head>
 	<body>
 		<div id="page-preloader"><span class="preloader"></span></div>
-		<div id="features-notsupported">
+		<div id="features-notsupported" class="features-notsupported">
 	    	<h4>Your browser doesn't support some</h4>
 	    	<h4>features of this web-site.</h4>
 	    	<h4>Please, use only modern browsers.</h4>

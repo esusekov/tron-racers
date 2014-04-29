@@ -31,6 +31,17 @@ $color-scheme: #01172C;
   padding: 0;
 }
 
+.features-supported {
+    height: 100%;
+    width: 100%; 
+} 
+.features-notsupported {
+    height: 100%;
+    width: 100%;
+    text-align:center;
+    padding-top: 20%; 
+} 
+
 @media only screen and (orientation:landscape) {
 
 	body {
