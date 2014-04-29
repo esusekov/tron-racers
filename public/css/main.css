@@ -5,6 +5,9 @@
 body {
   background: url("images/black-Linen.png"); }
 
+a {
+  color: #01b8e4; }
+
 h1 {
   font-size: 75px;
   margin-top: 25px;

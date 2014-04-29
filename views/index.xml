@@ -2,6 +2,30 @@
 <fest:doctype>html</fest:doctype>
 <html>
 	<head>
+		<style>
+			#page-preloader {
+			    position: fixed;
+			    left: 0;
+			    top: 0;
+			    right: 0;
+			    bottom: 0;
+			    background: #FFF;
+			    z-index: 100500;
+			}
+
+			#page-preloader .preloader {
+			    width: 230px;
+			    height: 200px;
+			    position: absolute;
+			    left: 50%;
+			    top: 50%;
+			    -webkit-transform: translate(-50%, -50%);
+                -moz-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+			    background: url('/js/images/loader.gif') no-repeat 50% 50%;
+			    margin: -16px 0 0 -16px;
+			}
+		</style>
 		<meta charset="utf-8" />
 		<title>
 			<fest:value>json.title</fest:value>
@@ -10,9 +34,9 @@
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
 	</head>
 	<body>
-		<!--<div id="loader" class="loader">
-			<img src="css/images/loading.gif"/>
-		</div>-->
+
+		<div id="page-preloader"><span class="preloader"></span></div>
+
 		<fest:if test="json.development">
 			<script data-main="js/main" src="js/lib/require.js"></script>
 		</fest:if>
@@ -25,9 +49,9 @@
 				require(['main'], function(){
 					console.timeEnd('load');
 				});
-				//$("#loader").hide();
 			</script>
 		</fest:if>
+
 	</body>
 </html>
 </fest:template>

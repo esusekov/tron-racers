@@ -7,6 +7,7 @@ require.config({
         backbone: "lib/backbone",
         Connector: "lib/Connector",
         FnQuery: "lib/FnQuery",
+        Modernizr: "lib/modernizr",
         "socket.io": "lib/socket.io"
     },
     shim: {
@@ -19,21 +20,45 @@ require.config({
         },
         "socket.io": {
             exports: "io"
+        },
+        'Modernizr': {
+            exports: 'Modernizr'
         }
     }
 });
 
 define([
     'router',
-    'Connector'
+    'Connector',
+    'checkTechs'
 ], function(
     router,
-    Connector
+    Connector,
+    checkTechs
 ){
     Backbone.history.start();
     localStorage.setItem("savedData", JSON.stringify([]));
     
     $(function() {
+
+        if (checkTechs.checkApp()) {
+            console.log("modern");
+            $("#features-notsupported").hide();
+            $("#features-supported").show();
+        } else {
+            console.log("old");
+            $("#features-supported").hide();
+            $("#features-notsupported").show();
+        }
+
+        //Прелоадер
+        var $page_preloader = $('#page-preloader'),
+            $preloader = $page_preloader.find('.preloader');
+        $preloader.delay(1000).fadeOut('slow');
+        $page_preloader.delay(1000).fadeOut('slow');
+        
+
+
         var message = document.getElementById('message');
         var start, init, reconnect;
         // Создаем связь с сервером

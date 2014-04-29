@@ -7,6 +7,7 @@ require.config({
         backbone: "/js/lib/backbone",
         Connector: "/js/lib/Connector",
         FnQuery: "/js/lib/FnQuery",
+        Modernizr: "lib/modernizr",
         "socket.io": "/socket.io/socket.io"
     },
     shim: {
@@ -19,15 +20,36 @@ require.config({
         },
         "socket.io": {
             exports: "io"
+        },
+        'Modernizr': {
+            exports: 'Modernizr'
         }
     }
 });
 
 define([
-    'Connector'
+    'Connector',
+    'checkTechs'
 ], function(
-    Connector
+    Connector,
+    checkTechs
 ){
+
+	if (checkTechs.checkJoystick()) {
+        console.log("modern");
+        $("#features-notsupported").hide();
+        $("#features-supported").show();
+    } else {
+        console.log("old");
+        $("#features-supported").hide();
+        $("#features-notsupported").show();
+    }
+
+	var $page_preloader = $('#page-preloader'),
+        $preloader = $page_preloader.find('.preloader');
+    $preloader.delay(1000).fadeOut('slow');
+    $page_preloader.delay(1000).fadeOut('slow');
+    
 	//var message = document.getElementById('message');
 	var input = document.getElementById('token');
 	var start, init, reconnect;

@@ -43,7 +43,10 @@ $color-scheme: #01172C;
   		height: 100%;
     	width: 100%;
   }
-
+	.features-supported {
+  		height: 100%;
+    	width: 100%;
+  }
 	@media only screen and (max-width : 320px){
     @include nav-landscape(7%, 60px);
     

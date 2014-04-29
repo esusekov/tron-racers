@@ -10,6 +10,10 @@
 
   .container {
     height: 100%;
+    width: 100%; }
+
+  .features-supported {
+    height: 100%;
     width: 100%; } }
 @media only screen and (orientation: landscape) and (max-width: 320px) {
   .nav-landscape {

@@ -2,14 +2,20 @@
   context_name="json">
     
     <h1 class="window__headers">TRON RACERS</h1>
-    <div id="info-connect">
-    	<h4>Enter this web address in your mobile browser:</h4>
-    	<h5>tron-racers.herokuapp.com/joystick</h5>
-    	<h4>Enter game code:</h4>
-		<h5 id="message"> </h5>
-		<h4><a href="#game">or play without mobile phone</a></h4>
-	</div>
-	<p id="start-game" style="display: none;"><a href="#game"  class="window__button">Start Game</a></p>
-	<p><a href="#scoreboard" class="window__button">Score Board</a></p>
-    
+    <div id="features-notsupported">
+    	<h4>Your browser doesn't support some</h4>
+    	<h4>features of this web-site.</h4>
+    	<h4>Please, use only modern browsers.</h4>
+    </div>
+    <div id="features-supported">
+	    <div id="info-connect">
+	    	<h4>Enter this web address in your mobile browser:</h4>
+	    	<h5>tron-racers.herokuapp.com/joystick</h5>
+	    	<h4>Enter game code:</h4>
+			<h5 id="message"> </h5>
+			<h4><a href="#game" style="text-decoration: underline;">or play without mobile phone</a></h4>
+		</div>
+		<p id="start-game" style="display: none;"><a href="#game"  class="window__button">Start Game</a></p>
+		<p><a href="#scoreboard" class="window__button">Score Board</a></p>
+    </div>
 </fest:template>
