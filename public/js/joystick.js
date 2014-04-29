@@ -195,6 +195,12 @@ define([
 		});
 	};
 
+	var disconnect = function(){
+        $("#features-notsupported").hide();
+        $("#features-supported").hide();
+        $("#con-error").show();
+    };
+
 	// Старт игры
 	start = function(guid){
 		console.log('start player');
@@ -206,7 +212,8 @@ define([
 	};
 
 	server.on('reconnect', reconnect);
-
+	server.on('disconnect', disconnect);
+	
 	init();
 
 	// Обмен сообщениями

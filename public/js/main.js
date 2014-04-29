@@ -106,8 +106,16 @@ define([
             });
         };
 
-        server.on('reconnect', reconnect);
+        var disconnect = function(){
+            gameStop(0);
+            window.location = "/#";
+            $("#features-notsupported").hide();
+            $("#features-supported").hide();
+            $("#con-error").show();
+        };
 
+        server.on('reconnect', reconnect);
+        server.on('disconnect', disconnect);
         // Старт игры
         var start = function(guid){
             console.log('start console');

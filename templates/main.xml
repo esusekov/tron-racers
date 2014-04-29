@@ -2,6 +2,10 @@
   context_name="json">
     
     <h1 class="window__headers">TRON RACERS</h1>
+    <div id="con-error" style="display: none;">
+    	<h4>Connection error.</h4>
+    	<h4>Refresh page.</h4>
+    </div>
     <div id="features-notsupported">
     	<h4>Your browser doesn't support some</h4>
     	<h4>features of this web-site.</h4>
