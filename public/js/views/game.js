@@ -15,24 +15,16 @@ define([
             document.getElementsByTagName('body')[0].appendChild(this.el);
             this.render();
         },*/
-        events: {
-            "keypress": function (e) {
-                if (e.which === 114) {
-                    console.log('Rtest');
-                    gameStop(-2); //возможно стоит поправить, с модульностью беда
-                }
-                console.log(e.which);
-            }
-        },
         render: function () {
             this.$el.html(this.template());
+            this.$el.keyup(this.keyPressHandlers);
             return this;
         },
         show: function () {
             this.el.style.display = "";
             var game = this;
             $('#dontsave').click(function(){
-                var nick = $('input[name=Nickname]');
+                var nick = $('#nickname');
                 nick.val(null);
                 nick.css({"border-color": "#9E9E9E"});
                 game.show()});
@@ -42,7 +34,6 @@ define([
             this.el.style.display = "none";
             
         }
-
     });
 
     return new View();

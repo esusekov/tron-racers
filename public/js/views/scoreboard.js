@@ -12,17 +12,16 @@ define([
         tagName: 'div',
         id: 'scoreboardview',
         className: 'window',
-        /*initialize: function () {
-            document.getElementsByTagName('body')[0].appendChild(this.el);
-            this.render();
-        },*/
+        events: {
+            "click #refreshTable": "show"
+        },
         render: function () {
             this.$el.html(this.template());
             return this;
         },
         show: function () {
-            var scoreboard = this;
-            $('#refreshTable').click(function () {scoreboard.show()});
+            //var scoreboard = this;
+            //$('#refreshTable').click(function () {scoreboard.show()});
             this.trigger('show', this);
             $('#error').hide();
             $('#loading').show();

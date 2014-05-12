@@ -12,10 +12,7 @@ define([
         tagName: 'div',
         id: 'gameOverview',
         className: 'window',
-        /*initialize: function () {
-            document.getElementsByTagName('body')[0].appendChild(this.el);
-            this.render();
-        },*/
+        
         events: {
             "click #save": "post",
             "keypress": function (e) {
@@ -26,7 +23,6 @@ define([
         },
         render: function () {
             this.$el.html(this.template());
-            //$('#save').click( function() {gameOver.post()});
             return this;
         },
         show: function () {
@@ -38,7 +34,7 @@ define([
         },
         post: function () {
             
-            var nick = $('input[name=Nickname]');
+            var nick = $('#nickname');
             var saveBtn = $('#save');
             var dontsaveBtn = $('#dontsave');
             var newScore = $('#newScore').html();

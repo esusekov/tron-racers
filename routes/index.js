@@ -5,7 +5,7 @@
 
 exports.index = function(req, res){
 	res.render('index', { 
-		title: 'Технопарк',
+		title: 'Tron Racers',
 		development: ('production' != process.env.NODE_ENV)
 	});
 };
@@ -16,7 +16,7 @@ exports.index = function(req, res){
 
 exports.joystick = function(req, res){
 	res.render('joystick', {
-		title: 'Технопарк',
+		title: 'TR Joystick',
 		development: ('production' != process.env.NODE_ENV)
 	});
 };

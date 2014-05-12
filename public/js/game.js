@@ -432,6 +432,17 @@ function courseBike(evt) {
 			}
 			break;
 		}//вправо
+		case 32: {
+			if (button.innerHTML == "Start")
+				gameStart();
+			else
+				gameStop(0);
+			break;
+		}
+		case 82: {
+			gameStop(-2);
+			break;
+		}
 	}
 }
 
@@ -473,7 +484,7 @@ function clearField(field, N) {
 }	
 
 function gameStop(flag) {
-	document.onkeyup = null;
+	//document.onkeyup = null;
 	coursesForTouch = function(msg) {return;};
 	button.innerHTML = "Start";
 	button.setAttribute('onClick', 'gameStart()');

@@ -36,11 +36,11 @@ define([
 ){
 
 	if (checkTechs.checkJoystick()) {
-        console.log("modern");
+        //console.log("modern");
         $("#features-notsupported").hide();
         $("#features-supported").show();
     } else {
-        console.log("old");
+        //console.log("old");
         $("#features-supported").hide();
         $("#features-notsupported").show();
     }
@@ -151,7 +151,7 @@ define([
 	
 	sendMsg = function(msg){
 		server.send(msg, function(answer){
-			console.log(answer);
+			//console.log(answer);
 		});
 	};
 	// Инициализация
@@ -181,6 +181,8 @@ define([
 	// Переподключение
 	// Используем сохранненный id связки
 	reconnect = function(){
+		$("#features-supported").show();
+        $("#con-error").hide();
 		server.bind({guid: sessionStorage.getItem('playerguid')}, function(data){
 			// Если все ок
 			if (data.status == 'success'){
@@ -203,7 +205,7 @@ define([
 
 	// Старт игры
 	start = function(guid){
-		console.log('start player');
+		//console.log('start player');
 		// Сохраняем id связки
 		sessionStorage.setItem('playerguid', guid);
 		$("#connection").hide();

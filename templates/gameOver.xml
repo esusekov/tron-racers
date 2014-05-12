@@ -8,7 +8,7 @@
 		</tr>
 		<tr>
 			<td><h2 class="window__headers">Nickname:</h2> </td>
-			<td><input class="window__input" type="text" name="Nickname"/></td>
+			<td><input id="nickname" class="window__input" type="text" /></td>
 		</tr>
 	</table>
 	<ul class="buttons">

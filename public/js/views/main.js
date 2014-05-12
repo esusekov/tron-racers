@@ -12,10 +12,7 @@ define([
         tagName: 'div',
         id: 'mainview',
         className: 'window',
-        /*initialize: function () {
-            document.getElementsByTagName('body')[0].appendChild(this.el);
-            this.render();
-        },*/
+        
         render: function () {
             this.$el.html(this.template());
             return this;
