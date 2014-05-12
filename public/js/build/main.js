@@ -12658,7 +12658,7 @@ define("backbone", ["underscore","jquery"], (function (global) {
     };
 }(this)));
 
-define('tmpl/main',[],function () { return function (__fest_context){var __fest_self=this,__fest_buf="",__fest_chunks=[],__fest_chunk,__fest_attrs=[],__fest_select,__fest_if,__fest_iterator,__fest_to,__fest_fn,__fest_html="",__fest_blocks={},__fest_params,__fest_element,__fest_debug_file="",__fest_debug_line="",__fest_debug_block="",__fest_htmlchars=/[&<>"]/g,__fest_htmlchars_test=/[&<>"]/,__fest_short_tags = {"area":true,"base":true,"br":true,"col":true,"command":true,"embed":true,"hr":true,"img":true,"input":true,"keygen":true,"link":true,"meta":true,"param":true,"source":true,"wbr":true},__fest_element_stack = [],__fest_htmlhash={"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"},__fest_jschars=/[\\'"\/\n\r\t\b\f<>]/g,__fest_jschars_test=/[\\'"\/\n\r\t\b\f<>]/,__fest_jshash={"\"":"\\\"","\\":"\\\\","/":"\\/","\n":"\\n","\r":"\\r","\t":"\\t","\b":"\\b","\f":"\\f","'":"\\'","<":"\\u003C",">":"\\u003E"},___fest_log_error;if(typeof __fest_error === "undefined"){___fest_log_error = (typeof console !== "undefined" && console.error) ? function(){return Function.prototype.apply.call(console.error, console, arguments)} : function(){};}else{___fest_log_error=__fest_error};function __fest_log_error(msg){___fest_log_error(msg+"\nin block \""+__fest_debug_block+"\" at line: "+__fest_debug_line+"\nfile: "+__fest_debug_file)}function __fest_replaceHTML(chr){return __fest_htmlhash[chr]}function __fest_replaceJS(chr){return __fest_jshash[chr]}function __fest_extend(dest, src){for(var i in src)if(src.hasOwnProperty(i))dest[i]=src[i];}function __fest_param(fn){fn.param=true;return fn}function __fest_call(fn, params,cp){if(cp)for(var i in params)if(typeof params[i]=="function"&&params[i].param)params[i]=params[i]();return fn.call(__fest_self,params)}function __fest_escapeJS(s){if (typeof s==="string") {if (__fest_jschars_test.test(s))return s.replace(__fest_jschars,__fest_replaceJS);} else if (typeof s==="undefined")return "";return s;}function __fest_escapeHTML(s){if (typeof s==="string") {if (__fest_htmlchars_test.test(s))return s.replace(__fest_htmlchars,__fest_replaceHTML);} else if (typeof s==="undefined")return "";return s;}var json=__fest_context;__fest_buf+=("<h1 class=\"window__headers\">TRON RACERS</h1><div id=\"con-error\" style=\"display: none;\"><h4>Connection error.</h4><h4>Refresh page.</h4></div><div id=\"features-notsupported\"><h4>Your browser doesn\'t support some</h4><h4>features of this web-site.</h4><h4>Please, use only modern browsers.</h4></div><div id=\"features-supported\"><div id=\"info-connect\"><h4>Enter this web address in your mobile browser:</h4><h5>tron-racers.herokuapp.com\/joystick</h5><h4>Enter game code:</h4><h5 id=\"message\"></h5><h4><a href=\"#game\" style=\"text-decoration: underline;\">or play without mobile phone</a></h4></div><p id=\"start-game\" style=\"display: none;\"><a href=\"#game\" class=\"window__button\">Start Game</a></p><p><a href=\"#scoreboard\" class=\"window__button\">Score Board</a></p></div>");__fest_to=__fest_chunks.length;if (__fest_to) {__fest_iterator = 0;for (;__fest_iterator<__fest_to;__fest_iterator++) {__fest_chunk=__fest_chunks[__fest_iterator];if (typeof __fest_chunk==="string") {__fest_html+=__fest_chunk;} else {__fest_fn=__fest_blocks[__fest_chunk.name];if (__fest_fn) __fest_html+=__fest_call(__fest_fn,__fest_chunk.params,__fest_chunk.cp);}}return __fest_html+__fest_buf;} else {return __fest_buf;}} ; });
+define('tmpl/main',[],function () { return function (__fest_context){var __fest_self=this,__fest_buf="",__fest_chunks=[],__fest_chunk,__fest_attrs=[],__fest_select,__fest_if,__fest_iterator,__fest_to,__fest_fn,__fest_html="",__fest_blocks={},__fest_params,__fest_element,__fest_debug_file="",__fest_debug_line="",__fest_debug_block="",__fest_htmlchars=/[&<>"]/g,__fest_htmlchars_test=/[&<>"]/,__fest_short_tags = {"area":true,"base":true,"br":true,"col":true,"command":true,"embed":true,"hr":true,"img":true,"input":true,"keygen":true,"link":true,"meta":true,"param":true,"source":true,"wbr":true},__fest_element_stack = [],__fest_htmlhash={"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"},__fest_jschars=/[\\'"\/\n\r\t\b\f<>]/g,__fest_jschars_test=/[\\'"\/\n\r\t\b\f<>]/,__fest_jshash={"\"":"\\\"","\\":"\\\\","/":"\\/","\n":"\\n","\r":"\\r","\t":"\\t","\b":"\\b","\f":"\\f","'":"\\'","<":"\\u003C",">":"\\u003E"},___fest_log_error;if(typeof __fest_error === "undefined"){___fest_log_error = (typeof console !== "undefined" && console.error) ? function(){return Function.prototype.apply.call(console.error, console, arguments)} : function(){};}else{___fest_log_error=__fest_error};function __fest_log_error(msg){___fest_log_error(msg+"\nin block \""+__fest_debug_block+"\" at line: "+__fest_debug_line+"\nfile: "+__fest_debug_file)}function __fest_replaceHTML(chr){return __fest_htmlhash[chr]}function __fest_replaceJS(chr){return __fest_jshash[chr]}function __fest_extend(dest, src){for(var i in src)if(src.hasOwnProperty(i))dest[i]=src[i];}function __fest_param(fn){fn.param=true;return fn}function __fest_call(fn, params,cp){if(cp)for(var i in params)if(typeof params[i]=="function"&&params[i].param)params[i]=params[i]();return fn.call(__fest_self,params)}function __fest_escapeJS(s){if (typeof s==="string") {if (__fest_jschars_test.test(s))return s.replace(__fest_jschars,__fest_replaceJS);} else if (typeof s==="undefined")return "";return s;}function __fest_escapeHTML(s){if (typeof s==="string") {if (__fest_htmlchars_test.test(s))return s.replace(__fest_htmlchars,__fest_replaceHTML);} else if (typeof s==="undefined")return "";return s;}var json=__fest_context;__fest_buf+=("<h1 class=\"window__headers\">TRON RACERS</h1><div id=\"features-notsupported\"><h4>Your browser doesn\'t support some</h4><h4>features of this web-site.</h4><h4>Please, use only modern browsers.</h4></div><div id=\"features-supported\"><div id=\"info-connect\"><h4>Enter this web address in your mobile browser:</h4><h5>tron-racers.herokuapp.com\/joystick</h5><h4>Enter game code:</h4><h5 id=\"message\"></h5><h4><a href=\"#game\" style=\"text-decoration: underline;\">or play without mobile phone</a></h4></div><div id=\"con-error\" style=\"display: none;\"><h4>Connection error.</h4><h4>Refresh page.</h4><h4><a href=\"#game\" style=\"text-decoration: underline;\">or play without mobile phone</a></h4></div><p id=\"start-game\" style=\"display: none;\"><a href=\"#game\" class=\"window__button\">Start Game</a></p><p><a href=\"#scoreboard\" class=\"window__button\">Score Board</a></p></div>");__fest_to=__fest_chunks.length;if (__fest_to) {__fest_iterator = 0;for (;__fest_iterator<__fest_to;__fest_iterator++) {__fest_chunk=__fest_chunks[__fest_iterator];if (typeof __fest_chunk==="string") {__fest_html+=__fest_chunk;} else {__fest_fn=__fest_blocks[__fest_chunk.name];if (__fest_fn) __fest_html+=__fest_call(__fest_fn,__fest_chunk.params,__fest_chunk.cp);}}return __fest_html+__fest_buf;} else {return __fest_buf;}} ; });
 define('views/main',[
     'backbone',
     'tmpl/main'
@@ -12673,10 +12673,7 @@ define('views/main',[
         tagName: 'div',
         id: 'mainview',
         className: 'window',
-        /*initialize: function () {
-            document.getElementsByTagName('body')[0].appendChild(this.el);
-            this.render();
-        },*/
+        
         render: function () {
             this.$el.html(this.template());
             return this;
@@ -12711,24 +12708,16 @@ define('views/game',[
             document.getElementsByTagName('body')[0].appendChild(this.el);
             this.render();
         },*/
-        events: {
-            "keypress": function (e) {
-                if (e.which === 114) {
-                    console.log('Rtest');
-                    gameStop(-2); //возможно стоит поправить, с модульностью беда
-                }
-                console.log(e.which);
-            }
-        },
         render: function () {
             this.$el.html(this.template());
+            this.$el.keyup(this.keyPressHandlers);
             return this;
         },
         show: function () {
             this.el.style.display = "";
             var game = this;
             $('#dontsave').click(function(){
-                var nick = $('input[name=Nickname]');
+                var nick = $('#nickname');
                 nick.val(null);
                 nick.css({"border-color": "#9E9E9E"});
                 game.show()});
@@ -12738,7 +12727,6 @@ define('views/game',[
             this.el.style.display = "none";
             
         }
-
     });
 
     return new View();
@@ -12832,17 +12820,16 @@ define('views/scoreboard',[
         tagName: 'div',
         id: 'scoreboardview',
         className: 'window',
-        /*initialize: function () {
-            document.getElementsByTagName('body')[0].appendChild(this.el);
-            this.render();
-        },*/
+        events: {
+            "click #refreshTable": "show"
+        },
         render: function () {
             this.$el.html(this.template());
             return this;
         },
         show: function () {
-            var scoreboard = this;
-            $('#refreshTable').click(function () {scoreboard.show()});
+            //var scoreboard = this;
+            //$('#refreshTable').click(function () {scoreboard.show()});
             this.trigger('show', this);
             $('#error').hide();
             $('#loading').show();
@@ -12936,7 +12923,7 @@ define('views/viewManager',[
     
     return new View();
 });
-define('tmpl/gameOver',[],function () { return function (__fest_context){var __fest_self=this,__fest_buf="",__fest_chunks=[],__fest_chunk,__fest_attrs=[],__fest_select,__fest_if,__fest_iterator,__fest_to,__fest_fn,__fest_html="",__fest_blocks={},__fest_params,__fest_element,__fest_debug_file="",__fest_debug_line="",__fest_debug_block="",__fest_htmlchars=/[&<>"]/g,__fest_htmlchars_test=/[&<>"]/,__fest_short_tags = {"area":true,"base":true,"br":true,"col":true,"command":true,"embed":true,"hr":true,"img":true,"input":true,"keygen":true,"link":true,"meta":true,"param":true,"source":true,"wbr":true},__fest_element_stack = [],__fest_htmlhash={"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"},__fest_jschars=/[\\'"\/\n\r\t\b\f<>]/g,__fest_jschars_test=/[\\'"\/\n\r\t\b\f<>]/,__fest_jshash={"\"":"\\\"","\\":"\\\\","/":"\\/","\n":"\\n","\r":"\\r","\t":"\\t","\b":"\\b","\f":"\\f","'":"\\'","<":"\\u003C",">":"\\u003E"},___fest_log_error;if(typeof __fest_error === "undefined"){___fest_log_error = (typeof console !== "undefined" && console.error) ? function(){return Function.prototype.apply.call(console.error, console, arguments)} : function(){};}else{___fest_log_error=__fest_error};function __fest_log_error(msg){___fest_log_error(msg+"\nin block \""+__fest_debug_block+"\" at line: "+__fest_debug_line+"\nfile: "+__fest_debug_file)}function __fest_replaceHTML(chr){return __fest_htmlhash[chr]}function __fest_replaceJS(chr){return __fest_jshash[chr]}function __fest_extend(dest, src){for(var i in src)if(src.hasOwnProperty(i))dest[i]=src[i];}function __fest_param(fn){fn.param=true;return fn}function __fest_call(fn, params,cp){if(cp)for(var i in params)if(typeof params[i]=="function"&&params[i].param)params[i]=params[i]();return fn.call(__fest_self,params)}function __fest_escapeJS(s){if (typeof s==="string") {if (__fest_jschars_test.test(s))return s.replace(__fest_jschars,__fest_replaceJS);} else if (typeof s==="undefined")return "";return s;}function __fest_escapeHTML(s){if (typeof s==="string") {if (__fest_htmlchars_test.test(s))return s.replace(__fest_htmlchars,__fest_replaceHTML);} else if (typeof s==="undefined")return "";return s;}var json=__fest_context;__fest_buf+=("<h1 class=\"window__headers\">You win!</h1><table><tr><td><h2 class=\"window__headers\">Your score:</h2></td><td><h2 id=\"newScore\" class=\"window__headers\"></h2></td></tr><tr><td><h2 class=\"window__headers\">Nickname:</h2></td><td><input class=\"window__input\" type=\"text\" name=\"Nickname\"/></td></tr></table><ul class=\"buttons\"><li class=\"buttons__left\"><a id=\"save\" href=\"javascript:void(0)\" class=\"window__button\">Save</a></li><li class=\"buttons__right\"><a id=\"dontsave\" href=\"javascript:void(0)\" class=\"window__button\">Back</a></li></ul>");__fest_to=__fest_chunks.length;if (__fest_to) {__fest_iterator = 0;for (;__fest_iterator<__fest_to;__fest_iterator++) {__fest_chunk=__fest_chunks[__fest_iterator];if (typeof __fest_chunk==="string") {__fest_html+=__fest_chunk;} else {__fest_fn=__fest_blocks[__fest_chunk.name];if (__fest_fn) __fest_html+=__fest_call(__fest_fn,__fest_chunk.params,__fest_chunk.cp);}}return __fest_html+__fest_buf;} else {return __fest_buf;}} ; });
+define('tmpl/gameOver',[],function () { return function (__fest_context){var __fest_self=this,__fest_buf="",__fest_chunks=[],__fest_chunk,__fest_attrs=[],__fest_select,__fest_if,__fest_iterator,__fest_to,__fest_fn,__fest_html="",__fest_blocks={},__fest_params,__fest_element,__fest_debug_file="",__fest_debug_line="",__fest_debug_block="",__fest_htmlchars=/[&<>"]/g,__fest_htmlchars_test=/[&<>"]/,__fest_short_tags = {"area":true,"base":true,"br":true,"col":true,"command":true,"embed":true,"hr":true,"img":true,"input":true,"keygen":true,"link":true,"meta":true,"param":true,"source":true,"wbr":true},__fest_element_stack = [],__fest_htmlhash={"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;"},__fest_jschars=/[\\'"\/\n\r\t\b\f<>]/g,__fest_jschars_test=/[\\'"\/\n\r\t\b\f<>]/,__fest_jshash={"\"":"\\\"","\\":"\\\\","/":"\\/","\n":"\\n","\r":"\\r","\t":"\\t","\b":"\\b","\f":"\\f","'":"\\'","<":"\\u003C",">":"\\u003E"},___fest_log_error;if(typeof __fest_error === "undefined"){___fest_log_error = (typeof console !== "undefined" && console.error) ? function(){return Function.prototype.apply.call(console.error, console, arguments)} : function(){};}else{___fest_log_error=__fest_error};function __fest_log_error(msg){___fest_log_error(msg+"\nin block \""+__fest_debug_block+"\" at line: "+__fest_debug_line+"\nfile: "+__fest_debug_file)}function __fest_replaceHTML(chr){return __fest_htmlhash[chr]}function __fest_replaceJS(chr){return __fest_jshash[chr]}function __fest_extend(dest, src){for(var i in src)if(src.hasOwnProperty(i))dest[i]=src[i];}function __fest_param(fn){fn.param=true;return fn}function __fest_call(fn, params,cp){if(cp)for(var i in params)if(typeof params[i]=="function"&&params[i].param)params[i]=params[i]();return fn.call(__fest_self,params)}function __fest_escapeJS(s){if (typeof s==="string") {if (__fest_jschars_test.test(s))return s.replace(__fest_jschars,__fest_replaceJS);} else if (typeof s==="undefined")return "";return s;}function __fest_escapeHTML(s){if (typeof s==="string") {if (__fest_htmlchars_test.test(s))return s.replace(__fest_htmlchars,__fest_replaceHTML);} else if (typeof s==="undefined")return "";return s;}var json=__fest_context;__fest_buf+=("<h1 class=\"window__headers\">You win!</h1><table><tr><td><h2 class=\"window__headers\">Your score:</h2></td><td><h2 id=\"newScore\" class=\"window__headers\"></h2></td></tr><tr><td><h2 class=\"window__headers\">Nickname:</h2></td><td><input id=\"nickname\" class=\"window__input\" type=\"text\"/></td></tr></table><ul class=\"buttons\"><li class=\"buttons__left\"><a id=\"save\" href=\"javascript:void(0)\" class=\"window__button\">Save</a></li><li class=\"buttons__right\"><a id=\"dontsave\" href=\"javascript:void(0)\" class=\"window__button\">Back</a></li></ul>");__fest_to=__fest_chunks.length;if (__fest_to) {__fest_iterator = 0;for (;__fest_iterator<__fest_to;__fest_iterator++) {__fest_chunk=__fest_chunks[__fest_iterator];if (typeof __fest_chunk==="string") {__fest_html+=__fest_chunk;} else {__fest_fn=__fest_blocks[__fest_chunk.name];if (__fest_fn) __fest_html+=__fest_call(__fest_fn,__fest_chunk.params,__fest_chunk.cp);}}return __fest_html+__fest_buf;} else {return __fest_buf;}} ; });
 define('views/gameOver',[
     'backbone',
     'tmpl/gameOver'
@@ -12951,10 +12938,7 @@ define('views/gameOver',[
         tagName: 'div',
         id: 'gameOverview',
         className: 'window',
-        /*initialize: function () {
-            document.getElementsByTagName('body')[0].appendChild(this.el);
-            this.render();
-        },*/
+        
         events: {
             "click #save": "post",
             "keypress": function (e) {
@@ -12965,7 +12949,6 @@ define('views/gameOver',[
         },
         render: function () {
             this.$el.html(this.template());
-            //$('#save').click( function() {gameOver.post()});
             return this;
         },
         show: function () {
@@ -12977,7 +12960,7 @@ define('views/gameOver',[
         },
         post: function () {
             
-            var nick = $('input[name=Nickname]');
+            var nick = $('#nickname');
             var saveBtn = $('#save');
             var dontsaveBtn = $('#dontsave');
             var newScore = $('#newScore').html();
@@ -17729,115 +17712,114 @@ define('main',[
     Backbone.history.start();
     localStorage.setItem("savedData", JSON.stringify([]));
     
-    //$(function() {
+    
 
-        if (checkTechs.checkApp()) {
-            console.log("modern");
-            $("#features-notsupported").hide();
-            $("#features-supported").show();
-        } else {
-            console.log("old");
-            $("#features-supported").hide();
-            $("#features-notsupported").show();
+    if (checkTechs.checkApp()) {
+        //console.log("modern");
+        $("#features-notsupported").hide();
+        $("#features-supported").show();
+    } else {
+        //console.log("old");
+        $("#features-supported").hide();
+        $("#features-notsupported").show();
+    }
+
+    //Прелоадер
+    var $page_preloader = $('#page-preloader'),
+        $preloader = $page_preloader.find('.preloader');
+    $preloader.delay(1000).fadeOut('slow');
+    $page_preloader.delay(1000).fadeOut('slow');
+    //gameMode = false - игра с клавиатуры, true - подключен джойстик
+    var gameMode = false;
+
+    var message = document.getElementById('message');
+    var start, init, reconnect;
+    // Создаем связь с сервером
+    var server = new Connector({
+            server: ['getToken', 'bind'],
+            remote: '/console'
         }
+    );
 
-        //Прелоадер
-        var $page_preloader = $('#page-preloader'),
-            $preloader = $page_preloader.find('.preloader');
-        $preloader.delay(1000).fadeOut('slow');
-        $page_preloader.delay(1000).fadeOut('slow');
-        
+    // На подключении игрока стартуем игру
+    server.on('player-joined', function(data){
+        // Передаем id связки консоль-джостик
+        start(data.guid);
+        gameMode = true;
+    });
 
-
-        var message = document.getElementById('message');
-        var start, init, reconnect;
-        // Создаем связь с сервером
-        var server = new Connector({
-                server: ['getToken', 'bind'],
-                remote: '/console'
-            }
-        );
-
-        // На подключении игрока стартуем игру
-        server.on('player-joined', function(data){
-            // Передаем id связки консоль-джостик
-            start(data.guid);
-        });
-
-        // Инициализация
-        var init = function(){
-            message.innerHTML = 'ready';
-            // Если id нет
-            if (!sessionStorage.getItem('consoleguid')){
-                // Получаем токен
-                server.getToken(function(token){
-                    message.innerHTML = token;
-                });
-            } else { // иначе
-                // переподключаемся к уже созданной связке
-                reconnect();
-            }
-        };
-
-        // Переподключение
-        var reconnect = function(){
-            // Используем сохранненный id связки
-            server.bind({guid: sessionStorage.getItem('consoleguid')}, function(data){
-                // Если все ок
-                if (data.status == 'success'){
-                    // Стартуем
-                    start(data.guid);
-                // Если связки уже нет
-                } else if (data.status == 'undefined guid'){
-                    // Начинаем все заново
-                    sessionStorage.removeItem('consoleguid');
-                    init();
-                }
+    // Инициализация
+    var init = function(){
+        message.innerHTML = 'ready';
+        // Если id нет
+        if (!sessionStorage.getItem('consoleguid')){
+            // Получаем токен
+            server.getToken(function(token){
+                message.innerHTML = token;
             });
-        };
+            $("#info-connect").show();
+        } else { // иначе
+            // переподключаемся к уже созданной связке
+            reconnect();
+        }
+    };
 
-        var disconnect = function(){
+    // Переподключение
+    var reconnect = function(){
+        // Используем сохранненный id связки
+        $("#con-error").hide();
+        server.bind({guid: sessionStorage.getItem('consoleguid')}, function(data){
+            // Если все ок
+            if (data.status == 'success'){
+                // Стартуем
+                start(data.guid);
+            // Если связки уже нет
+            } else if (data.status == 'undefined guid'){
+                // Начинаем все заново
+                sessionStorage.removeItem('consoleguid');
+                init();
+            }
+        });
+    };
+
+    var disconnect = function(){
+        if (gameMode) {
             gameStop(0);
             window.location = "/#";
-            $("#features-notsupported").hide();
-            $("#features-supported").hide();
-            $("#con-error").show();
-        };
-
-        server.on('reconnect', reconnect);
-        server.on('disconnect', disconnect);
-        // Старт игры
-        var start = function(guid){
-            console.log('start console');
-            // Сохраняем id связки
-            sessionStorage.setItem('consoleguid', guid);
             $("#info-connect").hide();
-            $("#start-game").show();
-            window.location = "/#game";
-        };
+            $("#start-game").hide();
+            $("#con-error").show();
+        }
+    };
 
-        init();
+    server.on('reconnect', reconnect);
+    server.on('disconnect', disconnect);
+    // Старт игры
+    var start = function(guid){
+        //console.log('start console');
+        // Сохраняем id связки
+        sessionStorage.setItem('consoleguid', guid);
+        $("#info-connect").hide();
+        $("#start-game").show();
+        window.location = "/#game";
+    };
 
-        // Обмен сообщениями
-        server.on('message', function(data, answer){
-            if ((window.location.href.indexOf("game") > -1) &&
-                ($('#gameview').css("display") != "none")) {
-                switch (data) {
-                    case 'play': gameStart(); answer(data); break;
-                    case 'pause': gameStop(0); answer(data); break;
-                    case 'restart': gameStop(-2); answer(data); break;
-                    default: coursesForTouch(data); answer(data);
-                }
+    init();
+
+    // Обмен сообщениями
+    server.on('message', function(data, answer){
+        if ((window.location.href.indexOf("game") > -1) &&
+            ($('#gameview').css("display") != "none")) {
+            switch (data) {
+                case 'play': gameStart(); answer(data); break;
+                case 'pause': gameStop(0); answer(data); break;
+                case 'restart': gameStop(-2); answer(data); break;
+                default: coursesForTouch(data); answer(data);
             }
-        });
+        }
+    });
 
-        window.server = server;
+    window.server = server;
 
-        /*
-        server.send('message', function(answer){
-            console.log(answer);
-        });
-        */
-    //});
 });
 
