@@ -1,5 +1,7 @@
 <fest:template xmlns:fest="http://fest.mail.ru"
   context_name="json">
+
+        <div class="window__question-sign" title="Use left and right arrow keys to turn the bike"></div>
 		<div class="canvas">
             <canvas id="myCanvas" width="510" height="510" align="center"> 
             <!-- Insert fallback content here -->

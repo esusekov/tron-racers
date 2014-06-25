@@ -127,10 +127,6 @@ define([
 		$("#left-btn-img").css("opacity", "1");
 		sendMsg('left');
 	});
-	// Hammer($("#left-btn")).on("hold", function(event) {
-	// 	event.preventDefault();
-	// });
-
 
 	$("#right-btn").on("touchstart", function(e) {
 		e.preventDefault();
@@ -145,9 +141,6 @@ define([
 		$("#right-btn-img").css("opacity", "1");
 		sendMsg('right');
 	});
-	// Hammer($("#right-btn")).on("hold", function(event) {
-	// 	event.preventDefault();
-	// });
 	
 	sendMsg = function(msg){
 		server.send(msg, function(answer){

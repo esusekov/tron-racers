@@ -32,7 +32,7 @@ module.exports = {
 		res.end();
 		return;}, 2000);*/
 		//убрать setTimeout
-		setTimeout(function () {res.end(s)}, 2000);
+		setTimeout(function () {res.end(s)}, 1000);
 	},
 
 	getOne: function(req, res){
